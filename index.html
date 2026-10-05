@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#062c49">
+  <meta name="description" content="The Electro Tech Solar provides quality solar, electrical, mechanical, civil and structured cabling solutions in Lahore.">
+  <meta property="og:title" content="The Electro Tech Solar | Powering a Smarter Energy Future">
+  <meta property="og:description" content="Quality solar and technical solutions with professional engineering expertise.">
+  <title>The Electro Tech Solar | Premium Solar & Technical Solutions</title>
+  <style>
+    :root {
+      --navy: #062c49;
+      --navy-2: #0a3b5d;
+      --blue: #1268ad;
+      --blue-bright: #2c91d3;
+      --yellow: #ffc21c;
+      --yellow-soft: #fff2b8;
+      --ink: #0b2539;
+      --muted: #607487;
+      --paper: #ffffff;
+      --mist: #f2f7fb;
+      --line: #d9e7f0;
+      --shadow: 0 22px 70px rgba(6, 44, 73, .13);
+      --radius: 22px;
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; overflow-x: hidden; }
+    body.no-scroll { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .eyebrow { align-items: center; color: var(--blue); display: flex; font-size: .72rem; font-weight: 800; gap: 10px; letter-spacing: .18em; margin-bottom: 18px; text-transform: uppercase; }
+    .eyebrow::before { background: var(--yellow); border-radius: 50%; content: ""; height: 9px; width: 9px; }
+    .eyebrow.light { color: var(--yellow); }
+    h1, h2, h3, h4 { letter-spacing: -.055em; line-height: 1.05; }
+    h1 { font-size: clamp(3.2rem, 7vw, 7.1rem); max-width: 830px; }
+    h2 { font-size: clamp(2.45rem, 5vw, 4.5rem); }
+    h3 { font-size: 1.35rem; }
+    .section { padding: 130px 0; position: relative; }
+    .section-heading { max-width: 680px; }
+    .section-heading p { color: var(--muted); font-size: 1.04rem; margin-top: 20px; max-width: 590px; }
+    .button { align-items: center; background: var(--yellow); border: 1px solid var(--yellow); border-radius: 8px; color: var(--navy); display: inline-flex; font-size: .77rem; font-weight: 900; gap: 12px; justify-content: center; letter-spacing: .09em; min-height: 51px; padding: 0 21px; text-transform: uppercase; transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s ease; }
+    .button:hover { box-shadow: 0 13px 28px rgba(255,194,28,.24); transform: translateY(-3px); }
+    .button .arrow { font-size: 1.15rem; transition: transform .25s var(--ease); }
+    .button:hover .arrow { transform: translateX(4px); }
+    .button.blue { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .button.blue:hover { box-shadow: 0 13px 28px rgba(18,104,173,.24); }
+    .button.ghost { background: transparent; border-color: rgba(255,255,255,.34); color: #fff; }
+    .button.ghost:hover { background: rgba(255,255,255,.1); box-shadow: none; }
+    .button.ghost-dark { background: transparent; border-color: var(--line); color: var(--navy); }
+    .button.small { min-height: 43px; padding: 0 16px; }
+    .top-line { background: var(--navy); color: rgba(255,255,255,.72); font-size: .71rem; letter-spacing: .07em; padding: 9px 0; }
+    .top-line .container { align-items: center; display: flex; justify-content: space-between; }
+    .top-contact { display: flex; gap: 22px; }
+    .top-contact a:hover { color: var(--yellow); }
+    .header { background: rgba(255,255,255,.91); border-bottom: 1px solid rgba(217,231,240,.7); left: 0; position: sticky; top: 0; transition: box-shadow .3s ease, background .3s ease; width: 100%; z-index: 50; }
+    .header.scrolled { background: rgba(255,255,255,.97); box-shadow: 0 8px 30px rgba(6,44,73,.08); }
+    .nav { align-items: center; display: flex; height: 82px; justify-content: space-between; }
+    .brand { align-items: center; display: inline-flex; gap: 12px; min-width: 230px; }
+    .brand img { height: 54px; object-fit: contain; width: 105px; }
+    .brand-name { color: var(--navy); font-size: .73rem; font-weight: 900; letter-spacing: .08em; line-height: 1.14; text-transform: uppercase; }
+    .brand-name span { color: var(--blue); display: block; font-size: .59rem; letter-spacing: .2em; margin-top: 4px; }
+    .nav-links { align-items: center; display: flex; gap: 22px; }
+    .nav-links a { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; padding: 32px 0; position: relative; text-transform: uppercase; }
+    .nav-links a::after { background: var(--yellow); bottom: 22px; content: ""; height: 2px; left: 0; position: absolute; transform: scaleX(0); transform-origin: left; transition: transform .25s var(--ease); width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    .nav-cta { margin-left: 18px; }
+    .menu-button { background: transparent; border: 0; display: none; height: 44px; width: 44px; }
+    .menu-button span { background: var(--navy); display: block; height: 2px; margin: 5px auto; transition: transform .25s ease, opacity .25s ease; width: 22px; }
+    .menu-button.open span:first-child { transform: translateY(7px) rotate(45deg); }
+    .menu-button.open span:nth-child(2) { opacity: 0; }
+    .menu-button.open span:last-child { transform: translateY(-7px) rotate(-45deg); }
+
+    /* INTRO */
+    .intro { align-items: center; background: #fafdff; display: flex; inset: 0; justify-content: center; position: fixed; transition: opacity .7s var(--ease), visibility .7s; z-index: 200; }
+    .intro.hide { opacity: 0; pointer-events: none; visibility: hidden; }
+    .intro-inner { align-items: center; display: flex; flex-direction: column; position: relative; text-align: center; }
+    .intro-logo { filter: drop-shadow(0 13px 24px rgba(6,44,73,.11)); height: 155px; object-fit: contain; opacity: 0; transform: scale(.86); animation: logoIn 1s .15s var(--ease) forwards; width: 300px; }
+    .intro-sun { background: var(--yellow); border-radius: 50%; filter: blur(38px); height: 125px; opacity: .33; position: absolute; right: 41px; top: 19px; width: 125px; z-index: -1; }
+    .intro-energy { animation: energy 1.8s .45s var(--ease) forwards; background: linear-gradient(90deg, transparent, var(--blue), var(--yellow), transparent); height: 2px; margin: 22px 0 22px; opacity: 0; width: min(400px, 72vw); }
+    .intro-title { color: var(--navy); font-size: clamp(1.15rem, 3vw, 1.7rem); font-weight: 900; letter-spacing: .18em; opacity: 0; transform: translateY(12px); animation: fadeUp .8s 1.05s var(--ease) forwards; }
+    .intro-subtitle { color: var(--muted); font-size: .72rem; letter-spacing: .18em; margin-top: 11px; opacity: 0; text-transform: uppercase; animation: fadeUp .8s 1.25s var(--ease) forwards; }
+    .skip-intro { background: transparent; border: 1px solid var(--line); border-radius: 5px; bottom: 33px; color: var(--muted); font-size: .67rem; font-weight: 800; left: 50%; letter-spacing: .1em; padding: 9px 15px; position: absolute; text-transform: uppercase; transform: translateX(-50%); }
+    .skip-intro:hover { border-color: var(--blue); color: var(--blue); }
+    @keyframes logoIn { to { opacity: 1; transform: scale(1); } }
+    @keyframes energy { 0% { opacity: 0; transform: scaleX(0); } 45%, 75% { opacity: 1; transform: scaleX(1); } 100% { opacity: 0; transform: scaleX(1); } }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* HERO */
+    .hero { background: linear-gradient(115deg, #fafdff 0%, #edf7fd 57%, #fff9db 100%); min-height: 730px; overflow: hidden; padding: 108px 0 118px; position: relative; }
+    .hero::before { background: radial-gradient(circle, rgba(255,194,28,.18), transparent 62%); content: ""; height: 600px; position: absolute; right: -120px; top: -170px; width: 600px; }
+    .hero-grid { align-items: center; display: grid; gap: 70px; grid-template-columns: 1.06fr .94fr; position: relative; z-index: 1; }
+    .hero-copy h1 { color: var(--navy); }
+    .hero-copy h1 em { color: var(--blue); font-style: normal; }
+    .hero-lead { color: var(--muted); font-size: 1.12rem; margin: 30px 0 35px; max-width: 560px; }
+    .hero-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { align-items: center; color: var(--muted); display: flex; font-size: .72rem; gap: 9px; margin-top: 28px; }
+    .hero-note svg { color: var(--blue); height: 17px; width: 17px; }
+    .hero-visual { min-height: 480px; perspective: 1100px; position: relative; }
+    .visual-glow { background: var(--yellow); border-radius: 50%; filter: blur(65px); height: 210px; opacity: .42; position: absolute; right: 3%; top: 4%; width: 210px; }
+    .orbit { border: 1px solid rgba(18,104,173,.18); border-radius: 50%; height: 420px; left: 8%; position: absolute; top: 11%; transform: rotate(-19deg); width: 420px; }
+    .orbit::after { background: var(--yellow); border-radius: 50%; box-shadow: 0 0 0 8px rgba(255,194,28,.13), 0 0 40px rgba(255,194,28,.55); content: ""; height: 14px; position: absolute; right: 19px; top: 53px; width: 14px; }
+    .hero-panel { left: 6%; position: absolute; top: 19%; transform: rotateX(var(--rx, 7deg)) rotateY(var(--ry, -18deg)) rotateZ(-12deg); transform-style: preserve-3d; transition: transform .2s ease-out; width: 450px; }
+    .hero-panel .panel-face { background: linear-gradient(135deg, #0a5588, #092e4f); border: 10px solid #dbe9ef; border-radius: 13px; box-shadow: 24px 35px 60px rgba(6,44,73,.25); display: grid; gap: 3px; grid-template-columns: repeat(5,1fr); padding: 9px; transform: translateZ(16px); }
+    .hero-panel .cell { background: linear-gradient(135deg, #278cc9, #0d4771); border: 1px solid rgba(179,225,247,.37); height: 57px; position: relative; }
+    .hero-panel .cell::after { background: linear-gradient(115deg, rgba(255,255,255,.28), transparent 40%); content: ""; inset: 0; position: absolute; }
+    .hero-panel .frame { border: 4px solid rgba(255,194,28,.9); border-radius: 15px; inset: -16px; position: absolute; transform: translateZ(-6px); }
+    .hero-chip { align-items: center; backdrop-filter: blur(12px); background: rgba(255,255,255,.82); border: 1px solid rgba(255,255,255,.92); border-radius: 11px; box-shadow: 0 18px 40px rgba(6,44,73,.12); display: flex; gap: 11px; padding: 12px 15px; position: absolute; }
+    .hero-chip strong { color: var(--navy); display: block; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
+    .hero-chip small { color: var(--muted); display: block; font-size: .67rem; margin-top: 3px; }
+    .hero-chip svg { color: var(--blue); height: 25px; width: 25px; }
+    .chip-one { right: 0; top: 10%; }
+    .chip-two { bottom: 13%; left: 3%; }
+    .scroll-cue { align-items: center; bottom: 34px; color: var(--muted); display: flex; font-size: .67rem; gap: 10px; left: max(24px, calc((100vw - 1180px)/2)); letter-spacing: .15em; position: absolute; text-transform: uppercase; }
+    .scroll-cue i { border: 1px solid var(--blue); border-radius: 10px; display: block; height: 29px; position: relative; width: 17px; }
+    .scroll-cue i::after { animation: scrollDot 1.8s infinite; background: var(--blue); border-radius: 50%; content: ""; height: 4px; left: 5px; position: absolute; top: 5px; width: 4px; }
+    @keyframes scrollDot { 0%,100% { opacity: 0; transform: translateY(0); } 35% { opacity: 1; } 70% { opacity: 0; transform: translateY(11px); } }
+
+    /* ABOUT */
+    .about { background: var(--paper); }
+    .about-grid { align-items: center; display: grid; gap: 95px; grid-template-columns: .88fr 1.12fr; }
+    .about-statement { color: var(--navy); font-size: clamp(2rem, 4vw, 3.6rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.06; }
+    .about-statement span { color: var(--blue); }
+    .about-copy { color: var(--muted); font-size: 1rem; margin-top: 25px; max-width: 500px; }
+    .about-copy + .about-copy { margin-top: 14px; }
+    .about-visual { background: var(--navy); border-radius: 2px; min-height: 475px; overflow: hidden; padding: 39px; position: relative; }
+    .about-visual::before { border: 1px solid rgba(255,255,255,.15); border-radius: 50%; content: ""; height: 370px; left: -160px; position: absolute; top: -130px; width: 370px; }
+    .about-visual::after { background: var(--yellow); bottom: -80px; content: ""; height: 240px; opacity: .9; position: absolute; right: -80px; transform: rotate(45deg); width: 240px; }
+    .about-tag { color: var(--yellow); font-size: .71rem; font-weight: 900; letter-spacing: .18em; position: relative; text-transform: uppercase; z-index: 1; }
+    .about-visual h3 { color: #fff; font-size: clamp(2rem, 4vw, 3.5rem); margin: 34px 0; max-width: 390px; position: relative; z-index: 1; }
+    .about-visual p { color: rgba(255,255,255,.68); max-width: 370px; position: relative; z-index: 1; }
+    .about-rule { background: var(--yellow); height: 4px; margin: 32px 0; position: relative; width: 65px; z-index: 1; }
+    .about-meta { display: flex; gap: 38px; position: relative; z-index: 1; }
+    .about-meta strong { color: var(--yellow); display: block; font-size: 2.4rem; letter-spacing: -.07em; }
+    .about-meta small { color: rgba(255,255,255,.66); display: block; font-size: .7rem; letter-spacing: .04em; max-width: 100px; }
+
+    /* SERVICES */
+    .services { background: var(--mist); }
+    .service-intro { align-items: end; display: flex; justify-content: space-between; margin-bottom: 57px; }
+    .service-intro .section-heading { max-width: 620px; }
+    .service-list { border-top: 1px solid var(--line); }
+    .service-item { align-items: center; border-bottom: 1px solid var(--line); display: grid; gap: 28px; grid-template-columns: 72px 1fr 1.2fr 46px; padding: 30px 0; transition: padding .35s var(--ease), background .35s ease; }
+    .service-item:hover { background: var(--paper); padding-left: 22px; padding-right: 22px; }
+    .service-number { color: var(--blue); font-size: .74rem; font-weight: 900; letter-spacing: .12em; }
+    .service-item h3 { color: var(--navy); font-size: clamp(1.35rem, 2.5vw, 2.1rem); text-transform: uppercase; }
+    .service-item p { color: var(--muted); font-size: .91rem; max-width: 470px; }
+    .service-arrow { align-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--blue); display: flex; height: 42px; justify-content: center; transition: background .25s ease, color .25s ease, transform .25s ease; width: 42px; }
+    .service-item:hover .service-arrow { background: var(--yellow); border-color: var(--yellow); color: var(--navy); transform: rotate(-45deg); }
+
+    /* TECHNOLOGY */
+    .technology { background: var(--navy); color: #fff; overflow: hidden; }
+    .technology .section-heading p { color: rgba(255,255,255,.64); }
+    .technology-grid { align-items: center; display: grid; gap: 85px; grid-template-columns: .82fr 1.18fr; }
+    .tech-visual { min-height: 420px; perspective: 900px; position: relative; }
+    .tech-visual::before { background: radial-gradient(circle, rgba(255,194,28,.28), transparent 64%); content: ""; height: 380px; left: -80px; position: absolute; top: -40px; width: 380px; }
+    .scene { height: 325px; left: 5%; position: absolute; top: 50px; transform: rotateX(58deg) rotateZ(-26deg); transform-style: preserve-3d; width: 480px; }
+    .scene .large-panel { background-color: #0b5687; background-image: linear-gradient(rgba(143,215,245,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(143,215,245,.32) 1px, transparent 1px); background-size: 48px 48px; border: 10px solid #c7e2ec; border-radius: 10px; box-shadow: 0 30px 40px rgba(0,0,0,.27), inset 0 0 30px rgba(0,0,0,.2); height: 260px; left: 20px; position: absolute; top: 25px; transform: translateZ(42px); width: 440px; }
+    .scene .panel-leg { background: #7da0ae; bottom: -85px; height: 95px; left: 70px; position: absolute; transform: rotateX(-25deg) translateZ(-10px); width: 14px; }
+    .scene .panel-leg.two { left: auto; right: 70px; }
+    .scene .ground { background: rgba(14,108,163,.21); border: 1px solid rgba(112,193,233,.31); height: 270px; position: absolute; right: -45px; top: 46px; transform: translateZ(-28px); width: 420px; }
+    .energy-line { animation: energyFlow 3s infinite linear; background: linear-gradient(90deg, transparent, var(--yellow), #fff, transparent); box-shadow: 0 0 18px var(--yellow); height: 3px; left: 14%; opacity: .85; position: absolute; top: 54%; transform: rotate(-15deg); width: 350px; }
+    @keyframes energyFlow { from { opacity: 0; transform: translateX(-90px) rotate(-15deg); } 30% { opacity: 1; } 80% { opacity: 1; } to { opacity: 0; transform: translateX(100px) rotate(-15deg); } }
+    .tech-copy h2 { color: #fff; }
+    .tech-copy h2 span { color: var(--yellow); }
+    .tech-copy > p { color: rgba(255,255,255,.67); margin: 24px 0 30px; max-width: 500px; }
+    .brand-rail { display: flex; gap: 13px; margin-top: 30px; }
+    .brand-pill { align-items: center; border: 1px solid rgba(255,255,255,.18); color: #fff; display: flex; font-size: .85rem; font-weight: 900; letter-spacing: .1em; min-height: 55px; padding: 0 24px; text-transform: uppercase; }
+    .brand-pill::before { background: var(--yellow); content: ""; height: 7px; margin-right: 11px; width: 7px; }
+
+    /* ENERGY FLOW */
+    .flow { background: #fafdff; }
+    .flow-header { align-items: end; display: flex; justify-content: space-between; margin-bottom: 60px; }
+    .flow-header p { color: var(--muted); max-width: 385px; }
+    .flow-line { align-items: start; display: grid; gap: 0; grid-template-columns: repeat(5, 1fr); position: relative; }
+    .flow-line::before { background: linear-gradient(90deg, var(--yellow), var(--blue)); content: ""; height: 2px; left: 10%; position: absolute; right: 10%; top: 36px; }
+    .flow-step { position: relative; text-align: center; }
+    .flow-icon { align-items: center; background: var(--paper); border: 2px solid var(--blue); border-radius: 50%; color: var(--blue); display: flex; height: 74px; justify-content: center; margin: 0 auto 22px; position: relative; width: 74px; z-index: 1; }
+    .flow-step:first-child .flow-icon { border-color: var(--yellow); color: var(--yellow); }
+    .flow-icon svg { height: 30px; width: 30px; }
+    .flow-step h3 { font-size: 1rem; margin-bottom: 7px; }
+    .flow-step p { color: var(--muted); font-size: .78rem; margin: auto; max-width: 150px; }
+
+    /* ADVANTAGES */
+    .advantages { background: var(--mist); }
+    .advantage-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin-top: 55px; }
+    .advantage { background: var(--paper); border-top: 3px solid var(--yellow); min-height: 260px; padding: 31px; transition: box-shadow .3s ease, transform .3s var(--ease); }
+    .advantage:hover { box-shadow: var(--shadow); transform: translateY(-7px); }
+    .advantage-icon { color: var(--blue); height: 34px; margin-bottom: 28px; width: 34px; }
+    .advantage h3 { font-size: 1.25rem; margin-bottom: 13px; text-transform: uppercase; }
+    .advantage p { color: var(--muted); font-size: .88rem; }
+    .advantage-lower { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); margin-top: 16px; }
+    .advantage-lower .advantage { min-height: 225px; }
+
+    /* PROCESS */
+    .process { background: var(--paper); }
+    .process-grid { display: grid; gap: 80px; grid-template-columns: .82fr 1.18fr; margin-top: 68px; }
+    .process-intro { color: var(--muted); font-size: 1.03rem; max-width: 355px; }
+    .process-list { border-left: 1px solid var(--line); }
+    .process-step { display: grid; gap: 24px; grid-template-columns: 76px 1fr; padding: 0 0 45px 38px; position: relative; }
+    .process-step:last-child { padding-bottom: 0; }
+    .process-step::before { background: var(--yellow); border: 5px solid var(--paper); border-radius: 50%; content: ""; height: 15px; left: -8px; position: absolute; top: 4px; width: 15px; }
+    .process-step .step-number { color: var(--blue); font-size: .74rem; font-weight: 900; letter-spacing: .12em; }
+    .process-step h3 { font-size: 1.45rem; margin-bottom: 10px; text-transform: uppercase; }
+    .process-step p { color: var(--muted); font-size: .89rem; max-width: 490px; }
+    .process-step strong { color: var(--blue); }
+
+    /* CALCULATOR */
+    .calculator { background: linear-gradient(135deg, #eaf6fc, #fdf9df); }
+    .calculator-wrap { display: grid; gap: 0; grid-template-columns: .93fr 1.07fr; margin-top: 56px; }
+    .calc-form { background: var(--navy); color: #fff; padding: 43px; }
+    .calc-form h3 { font-size: 1.7rem; margin-bottom: 10px; }
+    .calc-form > p { color: rgba(255,255,255,.65); font-size: .85rem; margin-bottom: 30px; }
+    .field { margin-top: 21px; }
+    .field label { color: rgba(255,255,255,.75); display: flex; font-size: .74rem; font-weight: 800; justify-content: space-between; letter-spacing: .05em; margin-bottom: 10px; text-transform: uppercase; }
+    .field label output { color: var(--yellow); }
+    .field input[type="range"] { accent-color: var(--yellow); cursor: pointer; width: 100%; }
+    .field-note { color: rgba(255,255,255,.43); display: block; font-size: .68rem; margin-top: 6px; }
+    .calc-results { background: var(--paper); padding: 43px; }
+    .calc-results .eyebrow { margin-bottom: 12px; }
+    .calc-results h3 { font-size: 1.9rem; }
+    .result-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin: 30px 0; }
+    .result { background: var(--mist); border: 1px solid var(--line); padding: 18px; }
+    .result small { color: var(--muted); display: block; font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .result strong { color: var(--blue); display: block; font-size: 1.7rem; letter-spacing: -.07em; margin-top: 5px; }
+    .calc-disclaimer { color: var(--muted); font-size: .72rem; line-height: 1.55; margin: 21px 0; }
+    .calc-cta { width: 100%; }
+
+    /* WHY / VALUES */
+    .why { background: var(--navy); color: #fff; }
+    .why-grid { align-items: center; display: grid; gap: 85px; grid-template-columns: 1fr 1fr; }
+    .why .section-heading p { color: rgba(255,255,255,.64); }
+    .why-list { display: grid; gap: 1px; grid-template-columns: repeat(2, 1fr); }
+    .why-item { border-bottom: 1px solid rgba(255,255,255,.14); padding: 21px 10px 21px 0; }
+    .why-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.14); padding-right: 25px; }
+    .why-item:nth-child(even) { padding-left: 25px; }
+    .why-item h3 { color: var(--yellow); font-size: 1rem; margin-bottom: 7px; text-transform: uppercase; }
+    .why-item p { color: rgba(255,255,255,.62); font-size: .79rem; }
+    .values { background: var(--paper); }
+    .values-grid { display: grid; gap: 12px; grid-template-columns: repeat(5, 1fr); margin-top: 58px; }
+    .value { border: 1px solid var(--line); min-height: 214px; padding: 24px 19px; position: relative; transition: background .3s ease, border .3s ease, color .3s ease, transform .3s var(--ease); }
+    .value:hover { background: var(--navy); border-color: var(--navy); color: #fff; transform: translateY(-8px); }
+    .value-number { color: var(--yellow); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
+    .value h3 { font-size: 1.08rem; margin: 43px 0 12px; text-transform: uppercase; }
+    .value p { color: var(--muted); font-size: .78rem; }
+    .value:hover p { color: rgba(255,255,255,.66); }
+
+    /* WARRANTY / CTA */
+    .warranty { background: var(--mist); }
+    .warranty-head { align-items: end; display: flex; justify-content: space-between; margin-bottom: 53px; }
+    .warranty-head p { color: var(--muted); max-width: 350px; }
+    .warranty-grid { display: grid; gap: 14px; grid-template-columns: repeat(3,1fr); }
+    .warranty-card { background: var(--paper); border-bottom: 4px solid var(--yellow); padding: 34px; }
+    .warranty-card strong { color: var(--blue); display: block; font-size: clamp(3rem, 5vw, 5rem); letter-spacing: -.1em; line-height: .95; }
+    .warranty-card h3 { font-size: 1rem; margin-top: 17px; text-transform: uppercase; }
+    .warranty-card p { color: var(--muted); font-size: .82rem; margin-top: 8px; }
+    .cta-band { background: var(--yellow); overflow: hidden; padding: 94px 0; position: relative; }
+    .cta-band::after { border: 1px solid rgba(6,44,73,.18); border-radius: 50%; content: ""; height: 540px; position: absolute; right: -145px; top: -190px; width: 540px; }
+    .cta-band .container { align-items: center; display: flex; justify-content: space-between; position: relative; z-index: 1; }
+    .cta-band h2 { color: var(--navy); max-width: 650px; }
+    .cta-band p { color: rgba(6,44,73,.72); margin-top: 16px; max-width: 480px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .cta-band .button.blue { background: var(--navy); border-color: var(--navy); }
+    .cta-band .button.ghost-dark { border-color: rgba(6,44,73,.33); }
+
+    /* CONTACT / FOOTER */
+    .contact { background: var(--paper); }
+    .contact-grid { display: grid; gap: 90px; grid-template-columns: .8fr 1.2fr; }
+    .contact-intro p { color: var(--muted); margin: 21px 0 28px; max-width: 390px; }
+    .contact-details { display: grid; gap: 14px; }
+    .contact-detail { align-items: flex-start; display: flex; gap: 14px; }
+    .contact-detail svg { color: var(--blue); flex: 0 0 auto; height: 19px; margin-top: 2px; width: 19px; }
+    .contact-detail strong { display: block; font-size: .76rem; letter-spacing: .07em; text-transform: uppercase; }
+    .contact-detail a, .contact-detail span { color: var(--muted); display: block; font-size: .88rem; margin-top: 3px; }
+    .contact-detail a:hover { color: var(--blue); }
+    .contact-form { display: grid; gap: 15px; grid-template-columns: 1fr 1fr; }
+    .contact-form .full { grid-column: 1 / -1; }
+    .contact-form label { color: var(--navy); display: block; font-size: .71rem; font-weight: 900; letter-spacing: .07em; margin-bottom: 7px; text-transform: uppercase; }
+    .contact-form input, .contact-form select, .contact-form textarea { background: var(--mist); border: 1px solid var(--line); border-radius: 4px; color: var(--ink); outline: 0; padding: 13px 14px; transition: border .2s ease, box-shadow .2s ease; width: 100%; }
+    .contact-form textarea { min-height: 122px; resize: vertical; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(18,104,173,.1); }
+    .form-status { color: var(--blue); display: none; font-size: .8rem; font-weight: 700; grid-column: 1 / -1; }
+    .form-status.show { display: block; }
+    .footer { background: var(--navy); color: #fff; padding: 68px 0 26px; }
+    .footer-grid { display: grid; gap: 55px; grid-template-columns: 1.5fr 1fr 1fr 1.1fr; padding-bottom: 55px; }
+    .footer-brand img { background: #fff; border-radius: 4px; height: 70px; object-fit: contain; padding: 4px; width: 137px; }
+    .footer-brand p { color: rgba(255,255,255,.6); font-size: .8rem; margin-top: 20px; max-width: 245px; }
+    .footer h4 { color: var(--yellow); font-size: .77rem; letter-spacing: .1em; margin-bottom: 20px; text-transform: uppercase; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,.62); font-size: .8rem; }
+    .footer-links a:hover { color: var(--yellow); }
+    .footer-contact { color: rgba(255,255,255,.62); display: grid; font-size: .8rem; gap: 10px; }
+    .footer-contact a:hover { color: var(--yellow); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.43); display: flex; font-size: .7rem; justify-content: space-between; padding-top: 23px; }
+    .float-whatsapp { align-items: center; background: #21c66b; border-radius: 50%; bottom: 25px; box-shadow: 0 12px 26px rgba(10,75,48,.25); color: #fff; display: flex; height: 58px; justify-content: center; position: fixed; right: 25px; transition: transform .25s var(--ease); width: 58px; z-index: 45; }
+    .float-whatsapp::before { animation: pulse 2.2s infinite; border: 1px solid #21c66b; border-radius: 50%; content: ""; inset: -5px; position: absolute; }
+    .float-whatsapp:hover { transform: translateY(-5px) scale(1.05); }
+    .float-whatsapp svg { height: 28px; width: 28px; }
+    .float-tooltip { background: var(--navy); border-radius: 4px; bottom: 68px; color: #fff; font-size: .7rem; opacity: 0; padding: 8px 10px; pointer-events: none; position: absolute; right: 0; transform: translateY(5px); transition: opacity .2s ease, transform .2s ease; white-space: nowrap; }
+    .float-whatsapp:hover .float-tooltip { opacity: 1; transform: translateY(0); }
+    @keyframes pulse { 0%,100% { opacity: .5; transform: scale(1); } 50% { opacity: 0; transform: scale(1.26); } }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .intro { display: none; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 1050px) { .nav-links { gap: 12px; } .nav-links a { font-size: .66rem; } .hero-grid, .technology-grid, .contact-grid { gap: 45px; } .hero-panel { left: 0; transform: rotateX(7deg) rotateY(-18deg) rotateZ(-12deg) scale(.88); transform-origin: center; } .chip-one { right: -2%; } .values-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 800px) { .container { width: min(100% - 34px, 1180px); } .top-line { display: none; } .nav { height: 72px; } .brand { min-width: 0; } .brand img { height: 46px; width: 84px; } .brand-name { font-size: .64rem; } .brand-name span { font-size: .51rem; } .menu-button { display: block; } .nav-links { align-items: stretch; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 15px 25px rgba(6,44,73,.1); display: flex; flex-direction: column; gap: 0; left: -100%; padding: 15px 17px 23px; position: fixed; top: 72px; transition: left .35s var(--ease); width: 100%; } .nav-links.open { left: 0; } .nav-links a { padding: 15px 0; } .nav-links a::after { bottom: 7px; } .nav-cta { margin: 8px 0 0; width: 100%; } .nav-cta .button { width: 100%; } .hero { min-height: auto; padding: 80px 0 105px; } .hero-grid, .about-grid, .technology-grid, .process-grid, .calculator-wrap, .why-grid, .contact-grid { grid-template-columns: 1fr; } .hero-visual { margin: 15px auto 0; min-height: 430px; max-width: 590px; width: 100%; } .hero-panel { left: 8%; top: 20%; transform: rotateX(7deg) rotateY(-18deg) rotateZ(-12deg) scale(.78); } .chip-one { right: 0; } .chip-two { left: 0; } .about-grid, .technology-grid, .why-grid, .contact-grid { gap: 48px; } .about-visual { min-height: 430px; } .service-intro, .flow-header, .warranty-head { align-items: flex-start; flex-direction: column; gap: 20px; } .service-item { gap: 13px; grid-template-columns: 48px 1fr 35px; } .service-item p { grid-column: 2 / -1; } .service-item:hover { padding-left: 12px; padding-right: 12px; } .flow-line { gap: 31px; grid-template-columns: 1fr; } .flow-line::before { bottom: 36px; height: auto; left: calc(50% - 1px); right: auto; top: 36px; width: 2px; } .flow-step { display: grid; grid-template-columns: 1fr 1fr; text-align: left; } .flow-icon { grid-row: span 2; margin: 0 auto; } .flow-step p { margin: 0; } .advantage-grid, .advantage-lower { grid-template-columns: 1fr; } .tech-visual { min-height: 360px; } .scene { left: -7%; transform: rotateX(58deg) rotateZ(-26deg) scale(.72); transform-origin: top left; } .values-grid { grid-template-columns: repeat(2, 1fr); } .cta-band .container { align-items: flex-start; flex-direction: column; gap: 30px; } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .section { padding: 85px 0; } h1 { font-size: 3.25rem; } .hero-visual { min-height: 330px; } .hero-panel { left: -8%; top: 23%; transform: rotateX(7deg) rotateY(-18deg) rotateZ(-12deg) scale(.58); } .hero-chip { padding: 9px 11px; } .hero-chip strong { font-size: .61rem; } .hero-chip small { font-size: .58rem; } .chip-one { right: -5%; top: 3%; } .chip-two { bottom: 5%; left: -4%; } .about-visual { padding: 28px; } .about-meta { gap: 20px; } .about-meta strong { font-size: 1.9rem; } .service-item { grid-template-columns: 34px 1fr 31px; } .service-number { font-size: .65rem; } .scene { left: -22%; transform: rotateX(58deg) rotateZ(-26deg) scale(.58); } .calc-form, .calc-results { padding: 28px 22px; } .result strong { font-size: 1.35rem; } .values-grid { grid-template-columns: 1fr; } .contact-form { grid-template-columns: 1fr; } .contact-form .full { grid-column: auto; } .form-status { grid-column: auto; } .footer-grid { gap: 36px 22px; grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } .footer-bottom { flex-direction: column; gap: 8px; } .float-whatsapp { bottom: 18px; height: 53px; right: 18px; width: 53px; } }
+  
+
+    /* ================= SHOP / STORE ================= */
+    .shop-section{background:linear-gradient(180deg,#f7fbfe 0%,#fff 100%);overflow:hidden}
+    .shop-hero{background:var(--navy);border-radius:30px;color:#fff;margin:0 auto 46px;max-width:1180px;overflow:hidden;padding:56px 54px;position:relative}
+    .shop-hero::before{background:radial-gradient(circle at 82% 20%,rgba(255,194,28,.25),transparent 34%),radial-gradient(circle at 70% 90%,rgba(44,145,211,.24),transparent 42%);content:"";inset:0;pointer-events:none;position:absolute}
+    .shop-hero-grid{align-items:end;display:grid;gap:40px;grid-template-columns:1.3fr .7fr;position:relative;z-index:1}
+    .shop-kicker{color:var(--yellow);font-size:.72rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .shop-hero h2{font-size:clamp(2.7rem,5vw,5rem);margin-top:13px;max-width:720px}
+    .shop-hero p{color:rgba(255,255,255,.72);margin-top:18px;max-width:650px}
+    .shop-stat{border-left:1px solid rgba(255,255,255,.18);padding-left:28px}
+    .shop-stat strong{display:block;font-size:2.7rem;letter-spacing:-.05em}
+    .shop-stat span{color:rgba(255,255,255,.62);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+    .shop-toolbar{align-items:center;display:grid;gap:14px;grid-template-columns:1fr auto auto;margin:0 auto 30px;max-width:1180px}
+    .shop-search{background:#fff;border:1px solid var(--line);border-radius:12px;min-height:50px;padding:0 17px;outline:none;width:100%}
+    .shop-search:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(18,104,173,.08)}
+    .shop-filter{background:#fff;border:1px solid var(--line);border-radius:12px;min-height:50px;padding:0 14px;color:var(--ink);outline:none}
+    .shop-cart-button{position:relative;white-space:nowrap}
+    .cart-count{align-items:center;background:var(--navy);border-radius:50%;color:#fff;display:inline-flex;font-size:.63rem;height:21px;justify-content:center;min-width:21px;padding:0 5px}
+    .shop-grid{display:grid;gap:20px;grid-template-columns:repeat(4,1fr);margin:0 auto;max-width:1180px}
+    .product-card{background:#fff;border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column;min-width:0;overflow:hidden;position:relative;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s ease}
+    .product-card:hover{border-color:rgba(18,104,173,.25);box-shadow:0 22px 60px rgba(6,44,73,.12);transform:translateY(-6px)}
+    .product-art{align-items:center;background:linear-gradient(145deg,#edf6fb,#fafdff);display:flex;height:190px;justify-content:center;overflow:hidden;position:relative}
+    .product-art::after{background:radial-gradient(circle,rgba(255,194,28,.22),transparent 65%);content:"";height:180px;position:absolute;right:-30px;top:-40px;width:180px}
+    .panel-art{background:linear-gradient(145deg,#092f4d,#1769a8);border:6px solid #b9d5e7;border-radius:5px;box-shadow:0 20px 28px rgba(6,44,73,.25);height:106px;position:relative;transform:perspective(500px) rotateX(54deg) rotateZ(-18deg);width:142px;z-index:1}
+    .panel-art::before{background:linear-gradient(90deg,transparent 32%,rgba(255,255,255,.23) 33%,transparent 34%,transparent 65%,rgba(255,255,255,.23) 66%,transparent 67%),linear-gradient(0deg,transparent 32%,rgba(255,255,255,.2) 33%,transparent 34%,transparent 65%,rgba(255,255,255,.2) 66%,transparent 67%);content:"";inset:0;position:absolute}
+    .inverter-art{background:linear-gradient(145deg,#071d30,#174c6f);border:1px solid rgba(255,255,255,.18);border-radius:10px;box-shadow:0 22px 35px rgba(6,44,73,.25);height:122px;position:relative;width:82px;z-index:1}
+    .inverter-art::before{border:1px solid rgba(255,255,255,.25);border-radius:4px;content:"";height:31px;left:15px;position:absolute;right:15px;top:22px}
+    .inverter-art::after{background:var(--yellow);border-radius:50%;box-shadow:0 0 18px rgba(255,194,28,.7);content:"";height:6px;left:22px;position:absolute;top:35px;width:6px}
+    .product-source-image{display:block;height:145px;max-width:78%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 18px 22px rgba(6,44,73,.18))}
+.modal-source-image{display:block;max-height:340px;max-width:72%;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(6,44,73,.16))}
+.cart-source-image{display:block;height:52px;max-width:52px;object-fit:contain}
+.product-badge{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:99px;color:var(--blue);font-size:.61rem;font-weight:900;left:13px;letter-spacing:.08em;padding:6px 9px;position:absolute;text-transform:uppercase;top:13px;z-index:2}
+    .product-body{display:flex;flex:1;flex-direction:column;padding:20px}
+    .product-brand{color:var(--blue);font-size:.65rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .product-name{font-size:1.02rem;letter-spacing:-.025em;margin-top:8px;min-height:45px}
+    .product-meta{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+    .product-meta span{background:var(--mist);border-radius:7px;color:var(--muted);font-size:.63rem;font-weight:800;padding:6px 8px}
+    .product-bottom{align-items:end;display:flex;gap:12px;justify-content:space-between;margin-top:auto;padding-top:12px}
+    .product-price{color:var(--navy);font-size:1.03rem;font-weight:900;line-height:1.15}
+    .product-price small{color:var(--muted);display:block;font-size:.57rem;font-weight:700;margin-top:4px}
+    .product-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+    .icon-btn{align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;color:var(--navy);display:inline-flex;font-size:.68rem;font-weight:900;justify-content:center;min-height:40px;padding:0 10px;transition:.2s ease}
+    .icon-btn:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)} .icon-btn:disabled{cursor:not-allowed;opacity:.45;transform:none}
+    .icon-btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+    .shop-empty{background:#fff;border:1px dashed var(--line);border-radius:18px;color:var(--muted);display:none;margin:20px auto;padding:50px;text-align:center;max-width:1180px}
+    .shop-empty.show{display:block}
+    .shop-note{color:var(--muted);font-size:.72rem;margin:24px auto 0;max-width:1180px;text-align:center}
+    .shop-modal,.cart-drawer-wrap{inset:0;position:fixed;z-index:180;visibility:hidden}
+    .shop-modal.open,.cart-drawer-wrap.open{visibility:visible}
+    .shop-overlay{background:rgba(2,18,31,.62);backdrop-filter:blur(8px);inset:0;opacity:0;position:absolute;transition:opacity .25s ease}
+    .shop-modal.open .shop-overlay,.cart-drawer-wrap.open .shop-overlay{opacity:1}
+    .product-modal{background:#fff;border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.28);left:50%;max-height:90vh;max-width:900px;opacity:0;overflow:auto;position:absolute;top:50%;transform:translate(-50%,-46%) scale(.97);transition:.3s var(--ease);width:min(92%,900px)}
+    .shop-modal.open .product-modal{opacity:1;transform:translate(-50%,-50%) scale(1)}
+    .modal-close{align-items:center;background:#fff;border:1px solid var(--line);border-radius:50%;color:var(--navy);display:flex;height:40px;justify-content:center;position:absolute;right:18px;top:18px;width:40px;z-index:3}
+    .modal-product{display:grid;grid-template-columns:.85fr 1.15fr;min-height:500px}
+    .modal-art{align-items:center;background:linear-gradient(145deg,#edf6fb,#fafdff);display:flex;justify-content:center;min-height:500px}
+    .modal-copy{padding:55px 45px}
+    .modal-copy h3{font-size:2.1rem;margin:10px 0 16px}
+    .modal-copy p{color:var(--muted);font-size:.92rem}
+    .modal-specs{display:grid;gap:9px;grid-template-columns:1fr 1fr;margin:25px 0}
+    .modal-spec{background:var(--mist);border-radius:10px;padding:12px}.modal-spec span{color:var(--muted);display:block;font-size:.58rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.modal-spec strong{display:block;font-size:.83rem;margin-top:3px}
+    .modal-price{color:var(--navy);font-size:1.5rem;font-weight:900;margin-bottom:18px}
+    .cart-drawer{background:#fff;box-shadow:-25px 0 70px rgba(0,0,0,.2);display:flex;flex-direction:column;height:100%;max-width:500px;position:absolute;right:0;top:0;transform:translateX(100%);transition:transform .35s var(--ease);width:min(94%,500px)}
+    .cart-drawer-wrap.open .cart-drawer{transform:translateX(0)}
+    .cart-head{align-items:center;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;padding:25px}
+    .cart-head h3{font-size:1.5rem}.cart-items{flex:1;overflow:auto;padding:18px 25px}.cart-item{border-bottom:1px solid var(--line);display:grid;gap:12px;grid-template-columns:62px 1fr auto;padding:17px 0}.cart-thumb{align-items:center;background:var(--mist);border-radius:10px;display:flex;height:62px;justify-content:center}.cart-thumb .panel-art{height:34px;transform:perspective(300px) rotateX(54deg) rotateZ(-18deg);width:46px}.cart-thumb .inverter-art{height:43px;width:29px}.cart-item h4{font-size:.82rem;letter-spacing:-.01em}.cart-item p{color:var(--muted);font-size:.65rem;margin-top:3px}.qty{align-items:center;display:flex;gap:7px;margin-top:9px}.qty button{background:#fff;border:1px solid var(--line);border-radius:5px;height:25px;width:25px}.qty span{font-size:.7rem;font-weight:900;min-width:18px;text-align:center}.cart-item-side{text-align:right}.cart-item-side strong{font-size:.75rem}.remove-item{background:none;border:0;color:#a85b5b;font-size:.62rem;margin-top:7px}.cart-empty{color:var(--muted);padding:70px 20px;text-align:center}.cart-foot{border-top:1px solid var(--line);padding:22px 25px}.cart-total{align-items:center;display:flex;justify-content:space-between;margin-bottom:16px}.cart-total span{color:var(--muted);font-size:.75rem}.cart-total strong{font-size:1.25rem}.cart-foot .button{width:100%}
+    .checkout-modal .product-modal{max-width:760px}.checkout-copy{padding:45px}.checkout-copy h3{font-size:2rem}.checkout-grid{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:25px}.checkout-grid .full{grid-column:1/-1}.checkout-grid label{color:var(--muted);display:block;font-size:.64rem;font-weight:900;letter-spacing:.08em;margin-bottom:6px;text-transform:uppercase}.checkout-grid input,.checkout-grid textarea{border:1px solid var(--line);border-radius:9px;min-height:47px;outline:none;padding:11px 13px;width:100%}.checkout-grid textarea{min-height:95px;resize:vertical}.checkout-grid input:focus,.checkout-grid textarea:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(18,104,173,.08)}.checkout-summary{background:var(--mist);border:1px solid var(--line);border-radius:14px;margin-top:18px;padding:14px}.checkout-summary strong{display:block;color:var(--navy);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.checkout-summary div{color:var(--muted);font-size:.76rem;margin-top:5px}.checkout-help{background:#fff8d9;border:1px solid #f0df91;border-radius:10px;color:#705d18;font-size:.74rem;line-height:1.5;margin-top:15px;padding:11px 13px}
+    @media(max-width:1050px){.shop-grid{grid-template-columns:repeat(3,1fr)}.shop-hero-grid{grid-template-columns:1fr}.shop-stat{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:22px 0 0}}
+    @media(max-width:800px){.shop-hero{border-radius:22px;padding:38px 25px}.shop-toolbar{grid-template-columns:1fr 1fr}.shop-search{grid-column:1/-1}.shop-grid{grid-template-columns:repeat(2,1fr)}.modal-product{grid-template-columns:1fr}.modal-art{min-height:270px}.modal-copy{padding:32px 25px}.checkout-grid{grid-template-columns:1fr}.checkout-grid .full{grid-column:auto}}
+    @media(max-width:520px){.shop-grid{grid-template-columns:1fr}.shop-toolbar{grid-template-columns:1fr}.shop-filter,.shop-cart-button{width:100%}.product-art{height:210px}}
+
+  </style>
+</head>
+<body>
+  <div class="intro" id="intro" aria-label="Loading introduction">
+    <div class="intro-inner">
+      <div class="intro-sun"></div>
+      <img class="intro-logo" src="data:image/jpeg;base64,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" alt="The Electro Tech Solar official logo">
+      <div class="intro-energy"></div>
+      <div class="intro-title">THE ELECTRO TECH SOLAR</div>
+      <div class="intro-subtitle">Solar & technical solutions</div>
+    </div>
+    <button class="skip-intro" id="skipIntro" type="button">Skip introduction</button>
+  </div>
+
+  <div class="top-line"><div class="container"><span>QUALITY • PRICE • PERFORMANCE</span><div class="top-contact"><a href="tel:+923224344626">+92-3224344626</a><a href="mailto:mukhtarhussain4pk@gmail.com">mukhtarhussain4pk@gmail.com</a></div></div></div>
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="The Electro Tech Solar home">
+        <img src="data:image/jpeg;base64,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" alt="The Electro Tech Solar logo">
+        <div class="brand-name">The Electro Tech Solar<span>Solar & technical solutions</span></div>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#introduction">About</a><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#shop">Shop</a><a href="#savings">Savings</a><a href="#why-us">Why us</a><a href="#contact">Contact</a>
+        <a class="button small nav-cta" href="#contact">Get free consultation <span class="arrow">→</span></a>
+      </nav>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Solar engineering, made clear</div>
+          <h1>Powering a <em>smarter</em> energy future.</h1>
+          <p class="hero-lead">Quality solar and technical solutions shaped around your needs — with professional engineering expertise, reliable products and service focused on performance.</p>
+          <div class="hero-actions"><a class="button" href="#contact">Get free consultation <span class="arrow">→</span></a><a class="button ghost-dark" href="#solutions">Explore solutions <span class="arrow">↗</span></a></div>
+          <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 12h14M6.7 6.7l10.6 10.6M17.3 6.7 6.7 17.3"/></svg> Free site inspection and initial consultation</div>
+        </div>
+        <div class="hero-visual reveal" id="heroVisual" aria-label="Interactive solar panel visual">
+          <div class="visual-glow"></div><div class="orbit"></div>
+          <div class="hero-panel"><div class="frame"></div><div class="panel-face"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div></div>
+          <div class="hero-chip chip-one"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><div><strong>Solar solutions</strong><small>Built around your needs</small></div></div>
+          <div class="hero-chip chip-two"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 18h16M5 18l2-8h10l2 8M9 10V7h6v3M12 4v3"/></svg><div><strong>Technical expertise</strong><small>Electrical • mechanical • civil</small></div></div>
+        </div>
+      </div>
+      <div class="scroll-cue"><i></i> Explore the company</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="introduction"><div class="container about-grid">
+      <div class="reveal"><div class="eyebrow">About the company</div><div class="about-statement">Serious about <span>quality.</span> Focused on your solution.</div><p class="about-copy">The Electro Tech Solar is dedicated to high-quality service, customer satisfaction and a wide selection of products supported by technical expertise.</p><p class="about-copy">Our professional engineers and technicians provide Electrical, Mechanical, Civil and related services with HSE compliance and a focus on quality, price and performance.</p></div>
+      <div class="about-visual reveal"><div class="about-tag">A responsive technical partner</div><h3>We take the time to understand what you need.</h3><div class="about-rule"></div><p>From identifying the right product to supporting selection, negotiation and delivery, our approach is designed to create cost-effective solutions as per customer need.</p><div class="about-meta"><div><strong>12</strong><small>years combined experience in the solar industry in Pakistan</small></div><div><strong>Q·P·P</strong><small>quality, price and performance</small></div></div></div>
+    </div></section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services"><div class="container"><div class="service-intro"><div class="section-heading reveal"><div class="eyebrow">What we do</div><h2>Technical capability with a solar point of view.</h2><p>Explore the services described in the company profile — presented with the clarity your project deserves.</p></div><a class="button blue reveal" href="#contact">Discuss your project <span class="arrow">→</span></a></div>
+      <div class="service-list reveal">
+        <a class="service-item" href="#contact"><div class="service-number">01 /</div><h3>Structure cabling</h3><p>A complete system of cabling and associated hardware providing a comprehensive infrastructure.</p><span class="service-arrow">↗</span></a>
+        <a class="service-item" href="#contact"><div class="service-number">02 /</div><h3>Solar rank</h3><p>Solar energy generation and capacity continue to grow globally. We help clients explore solar solutions with technical guidance.</p><span class="service-arrow">↗</span></a>
+        <a class="service-item" href="#contact"><div class="service-number">03 /</div><h3>Electrical wiring</h3><p>Electrical installation of cabling and associated devices such as switches, distribution boards, sockets and light fittings.</p><span class="service-arrow">↗</span></a>
+      </div>
+    </div></section>
+
+    <!-- TECHNOLOGY -->
+    <section class="section technology" id="technology"><div class="container technology-grid"><div class="tech-visual reveal"><div class="scene"><div class="ground"></div><div class="large-panel"></div><div class="panel-leg"></div><div class="panel-leg two"></div></div><div class="energy-line"></div></div><div class="tech-copy reveal"><div class="eyebrow light">Solar solutions</div><h2>Technology that turns sunlight into <span>possibility.</span></h2><p>The Electro Tech Solar is a distributor of JINKO & SOLARMAX. Connect with us to discuss the right products and approach for your requirements.</p><a class="button" href="#contact">Request a consultation <span class="arrow">→</span></a><div class="brand-rail"><div class="brand-pill">Jinko</div><div class="brand-pill">Solarmax</div></div></div></div></section>
+
+    <!-- ENERGY FLOW -->
+    <section class="section flow" id="solutions"><div class="container"><div class="flow-header"><div class="section-heading reveal"><div class="eyebrow">How solar works</div><h2>From the sun to useful energy.</h2></div><p class="reveal">A simple visual explanation of the journey from solar collection to the energy needs of a home or business.</p></div><div class="flow-line reveal">
+      <div class="flow-step"><div class="flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div><div><h3>Sun</h3><p>Solar energy begins with sunlight.</p></div></div>
+      <div class="flow-step"><div class="flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18v12H3zM6 4h12v3H6zM7 10h3v3H7zM14 10h3v3h-3zM7 15h10"/></svg></div><div><h3>Panels</h3><p>Panels capture solar energy.</p></div></div>
+      <div class="flow-step"><div class="flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h2"/></svg></div><div><h3>Inverter</h3><p>Energy is converted for use.</p></div></div>
+      <div class="flow-step"><div class="flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM9 20v-5h6v5"/></svg></div><div><h3>Property</h3><p>Energy supports your home or business.</p></div></div>
+      <div class="flow-step"><div class="flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg></div><div><h3>Energy</h3><p>Technology becomes everyday value.</p></div></div>
+    </div></div></section>
+
+    <!-- ADVANTAGES -->
+    <section class="section advantages"><div class="container"><div class="section-heading reveal"><div class="eyebrow">Solar advantage</div><h2>Designed around the experience after installation.</h2><p>Convenience, affordability and support are part of the solution — not an afterthought.</p></div><div class="advantage-grid reveal">
+      <article class="advantage"><svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h14M14 8l4 4-4 4M5 5h7a3 3 0 0 1 3 3v1M5 19h7a3 3 0 0 0 3-3v-1"/></svg><h3>Affordability</h3><p>Competitive pricing structure with availability of easy monthly installments.</p></article>
+      <article class="advantage"><svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><h3>Convenience</h3><p>End-to-end product installation service with customer service and online energy consumption and troubleshooting monitoring.</p></article>
+      <article class="advantage"><svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 8 3v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6z"/><path d="m8 12 2.5 2.5L16 9"/></svg><h3>Quality assurance</h3><p>End-to-end installation and service positioning supported by professional technical teams.</p></article>
+    </div><div class="advantage-lower reveal"><article class="advantage"><h3>Free consultation</h3><p>Free site inspection and initial consultation to help clarify the right next step.</p></article><article class="advantage"><h3>Remote monitoring</h3><p>Remote online energy consumption monitoring and proactive troubleshooting.</p></article></div></div></section>
+
+    <!-- PROCESS -->
+    <section class="section process"><div class="container"><div class="section-heading reveal"><div class="eyebrow">Our method</div><h2>A clearer route from need to solution.</h2></div><div class="process-grid"><p class="process-intro reveal">The company profile describes a four-step process built around understanding the client, identifying the right supply, and delivering solutions focused on quality, price and performance.</p><div class="process-list reveal">
+      <div class="process-step"><div class="step-number">01</div><div><h3>Understand</h3><p>The client specifies the product or service they need.</p></div></div>
+      <div class="process-step"><div class="step-number">02</div><div><h3>Identify</h3><p>We identify companies that can deliver the product promptly, at the right price.</p></div></div>
+      <div class="process-step"><div class="step-number">03</div><div><h3>Select & deliver</h3><p>We assist clients through selection, negotiation and delivery to their complete satisfaction.</p></div></div>
+      <div class="process-step"><div class="step-number">04</div><div><h3>Solution</h3><p>We aim to deliver comprehensive quality products and services with the best solutions in terms of <strong>quality, price and performance</strong>.</p></div></div>
+    </div></div></div></section>
+
+    <!-- CALCULATOR -->
+    <section class="section calculator" id="savings"><div class="container"><div class="section-heading reveal"><div class="eyebrow">Planning tool</div><h2>Explore an estimated solar scenario.</h2><p>Use this simple calculator as a starting point before a professional site assessment.</p></div><div class="calculator-wrap reveal"><div class="calc-form"><h3>Your current energy picture</h3><p>Adjust the figures to see an illustrative estimate.</p><div class="field"><label for="bill">Monthly electricity bill <output id="billValue">PKR 50,000</output></label><input id="bill" type="range" min="10000" max="300000" step="5000" value="50000"><span class="field-note">Use your approximate monthly bill.</span></div><div class="field"><label for="usage">Monthly usage <output id="usageValue">500 kWh</output></label><input id="usage" type="range" min="100" max="3000" step="50" value="500"><span class="field-note">Optional estimate of monthly electricity consumption.</span></div><div class="field"><label for="sunHours">Daily sunlight assumption <output id="sunHoursValue">5.0 hours</output></label><input id="sunHours" type="range" min="3" max="7" step=".5" value="5"><span class="field-note">A configurable planning assumption, not a site measurement.</span></div></div><div class="calc-results"><div class="eyebrow">Estimated results</div><h3>A first look at the opportunity.</h3><div class="result-grid"><div class="result"><small>Indicative system size</small><strong id="systemResult">3.3 kW</strong></div><div class="result"><small>Estimated energy offset</small><strong id="offsetResult">80%</strong></div><div class="result"><small>Estimated monthly savings</small><strong id="monthlyResult">PKR 40,000</strong></div><div class="result"><small>Estimated annual savings</small><strong id="annualResult">PKR 480,000</strong></div><div class="result"><small>Indicative payback</small><strong id="paybackResult">3.4 years</strong></div><div class="result"><small>Planning output</small><strong id="outputResult">Review site</strong></div></div><p class="calc-disclaimer">Estimated results — final system sizing and savings depend on a professional site assessment, actual energy consumption, equipment selection and verified local values. These figures are not a guarantee.</p><a class="button blue calc-cta" id="calculatorWhatsapp" href="#contact">Get my free consultation <span class="arrow">→</span></a></div></div></div></section>
+
+    <!-- WHY US -->
+    <section class="section why" id="why-us"><div class="container why-grid"><div class="section-heading reveal"><div class="eyebrow light">Why The Electro Tech Solar</div><h2>Professional relationships. Practical solutions.</h2><p>We aim to combine quality products, technical expertise and responsive customer service in a way that respects your requirements.</p></div><div class="why-list reveal"><div class="why-item"><h3>Quality</h3><p>Quality products and services are central to the company’s positioning.</p></div><div class="why-item"><h3>Expertise</h3><p>Professional engineers and technicians support the work.</p></div><div class="why-item"><h3>Customer satisfaction</h3><p>A responsive approach that takes time to understand client needs.</p></div><div class="why-item"><h3>HSE compliance</h3><p>Services are provided with HSE compliance in mind.</p></div><div class="why-item"><h3>Cost-effective</h3><p>Solutions focused on quality, price and performance.</p></div><div class="why-item"><h3>Remote monitoring</h3><p>Online energy consumption monitoring and proactive troubleshooting.</p></div></div></div></section>
+
+    <!-- VALUES -->
+    <section class="section values"><div class="container"><div class="section-heading reveal"><div class="eyebrow">Our values</div><h2>The standards behind the service.</h2></div><div class="values-grid reveal"><article class="value"><div class="value-number">01</div><h3>Integrity</h3><p>Honesty, fairness and strong moral principles in our actions.</p></article><article class="value"><div class="value-number">02</div><h3>Excellence</h3><p>Striving for superior results and delivering what has been promised.</p></article><article class="value"><div class="value-number">03</div><h3>Teamwork</h3><p>Working together effectively and efficiently for the best solutions.</p></article><article class="value"><div class="value-number">04</div><h3>Responsibility</h3><p>Taking accountability and fulfilling commitments.</p></article><article class="value"><div class="value-number">05</div><h3>Trust</h3><p>Maintaining reliable partnerships and shared success.</p></article></div></div></section>
+
+    <!-- WARRANTY -->
+    <section class="section warranty"><div class="container"><div class="warranty-head"><div class="section-heading reveal"><div class="eyebrow">Confidence in the details</div><h2>Warranty information.</h2></div><p class="reveal">Warranty terms stated in the supplied company profile.</p></div><div class="warranty-grid reveal"><article class="warranty-card"><strong>25</strong><h3>Solar panel warranty</h3><p>Years</p></article><article class="warranty-card"><strong>5</strong><h3>Inverter warranty</h3><p>Years</p></article><article class="warranty-card"><strong>5</strong><h3>Workmanship warranty</h3><p>Years</p></article></div></div></section>
+
+    <!-- CTA -->
+    <section class="cta-band"><div class="container"><div class="reveal"><h2>Ready to explore solar?</h2><p>Request a free consultation or site inspection and start with a clearer understanding of your requirements.</p></div><div class="cta-actions reveal"><a class="button blue" href="#contact">Get free consultation <span class="arrow">→</span></a><a class="button ghost-dark" href="https://wa.me/923224344626?text=Hello%2C%20I%20would%20like%20to%20discuss%20solar%20solutions%20for%20my%20property." target="_blank" rel="noopener">Chat on WhatsApp <span class="arrow">↗</span></a></div></div></section>
+
+
+
+    <!-- SHOP -->
+    <section class="section shop-section" id="shop">
+      <div class="container">
+        <div class="shop-hero reveal">
+          <div class="shop-hero-grid">
+            <div><div class="shop-kicker">The Electro Tech Solar Store</div><h2>Choose the right solar hardware for your project.</h2><p>Browse the products listed in our supplied catalogues. Select a brand, compare available models and add the products you need to your cart.</p></div>
+            <div class="shop-stat"><strong id="shopProductCount">0</strong><span>catalogue products loaded</span></div>
+          </div>
+        </div>
+        <div class="shop-toolbar reveal">
+          <input class="shop-search" id="shopSearch" type="search" placeholder="Search brand, model, wattage or capacity..." aria-label="Search products">
+          <select class="shop-filter" id="shopCategory"><option value="all">All products</option><option value="panel">Solar Panels</option><option value="inverter">On-Grid Inverters</option></select>
+          <button class="button blue shop-cart-button" id="openCart" type="button">Cart <span class="cart-count" id="cartCount">0</span></button>
+        </div>
+        <div class="shop-grid" id="shopGrid"></div>
+        <div class="shop-empty" id="shopEmpty">No catalogue product matched your search. Try another brand, model or capacity.</div>
+        <p class="shop-note">Product information and listed prices are based on the supplied Solar Panels and On-Grid Inverters catalogues. Where a catalogue says “Call for Price”, the website will preserve that status. Orders are prepared for WhatsApp and sent to <strong>0301 5673506</strong>.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT MODAL -->
+    <div class="shop-modal" id="productModal" aria-hidden="true"><div class="shop-overlay" data-close-modal></div><div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalProductName"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><div class="modal-product"><div class="modal-art" id="modalArt"></div><div class="modal-copy"><div class="product-brand" id="modalBrand"></div><h3 id="modalProductName"></h3><p id="modalDescription"></p><div class="modal-specs" id="modalSpecs"></div><div class="modal-price" id="modalPrice"></div><button class="button blue" id="modalAdd" type="button">Add to cart <span class="arrow">→</span></button></div></div></div></div>
+
+    <!-- CART -->
+    <div class="cart-drawer-wrap" id="cartWrap" aria-hidden="true"><div class="shop-overlay" data-close-cart></div><aside class="cart-drawer" aria-label="Shopping cart"><div class="cart-head"><h3>Your cart</h3><button class="modal-close" style="position:static" type="button" data-close-cart aria-label="Close cart">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-foot"><div class="cart-total"><span>Subtotal</span><strong id="cartTotal">PKR 0</strong></div><button class="button blue" id="checkoutButton" type="button">Proceed to checkout <span class="arrow">→</span></button></div></aside></div>
+
+    <!-- CHECKOUT -->
+    <div class="shop-modal checkout-modal" id="checkoutModal" aria-hidden="true"><div class="shop-overlay" data-close-checkout></div><div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><button class="modal-close" type="button" data-close-checkout aria-label="Close">×</button><div class="checkout-copy"><div class="eyebrow">Order details</div><h3 id="checkoutTitle">Confirm your order.</h3><p style="color:var(--muted);margin-top:12px">Enter your details. After confirmation, WhatsApp will open with your complete order summary so you can press Send to confirm the order.</p><form id="checkoutForm" class="checkout-grid">
+<div><label for="checkoutName">Full name</label><input id="checkoutName" required placeholder="Your full name"></div>
+<div><label for="checkoutPhone">Phone / WhatsApp number</label><input id="checkoutPhone" type="tel" required placeholder="03XX XXXXXXX"></div>
+<div><label for="checkoutEmail">Email</label><input id="checkoutEmail" type="email" required placeholder="you@example.com"></div>
+<div><label for="checkoutCity">Choose city</label><select id="checkoutCity" required><option value="">Select city</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Rawalpindi</option><option>Faisalabad</option><option>Multan</option><option>Gujranwala</option><option>Sialkot</option><option>Peshawar</option><option>Abbottabad</option><option>Quetta</option><option>Hyderabad</option><option>Bahawalpur</option><option>Sargodha</option><option>Sheikhupura</option><option>Other</option></select></div>
+<div><label for="checkoutTown">Choose town / area</label><input id="checkoutTown" required list="townSuggestions" placeholder="Town / area / locality"><datalist id="townSuggestions"><option value="DHA"></option><option value="Bahria Town"></option><option value="Gulberg"></option><option value="Model Town"></option><option value="Johar Town"></option><option value="Cantt"></option><option value="Faisal Town"></option><option value="Wapda Town"></option><option value="Garden Town"></option><option value="Gulshan"></option><option value="North Nazimabad"></option><option value="Clifton"></option><option value="PECHS"></option><option value="Saddar"></option><option value="F-6"></option><option value="F-7"></option><option value="F-8"></option><option value="G-9"></option><option value="G-10"></option><option value="I-8"></option></datalist></div>
+<div><label for="checkoutPostalCode">Postal code</label><input id="checkoutPostalCode" required inputmode="numeric" pattern="[0-9]{4,6}" placeholder="Postal code"></div>
+<div class="full"><label for="checkoutAddress">Complete delivery address</label><textarea id="checkoutAddress" required placeholder="House / office number, street, block, landmark, etc."></textarea></div>
+<div class="full"><div class="checkout-summary" id="checkoutSummary"></div><div class="checkout-help">Your order will be prepared as a WhatsApp message with every selected model and quantity. After WhatsApp opens, press <strong>Send</strong> to submit the order.</div></div>
+<div class="full"><button class="button blue" type="submit">Confirm Order & Open WhatsApp <span class="arrow">↗</span></button></div>
+</form></div></div></div>
+
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact"><div class="container contact-grid"><div class="contact-intro reveal"><div class="eyebrow">Start a conversation</div><h2>Let’s talk about your requirements.</h2><p>Share a few details and continue the inquiry directly on WhatsApp. For a more accurate recommendation, request a free site inspection.</p><div class="contact-details"><div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9z"/></svg><div><strong>Phone</strong><a href="tel:+923224344626">+92-3224344626</a></div></div><div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>Email</strong><a href="mailto:mukhtarhussain4pk@gmail.com">mukhtarhussain4pk@gmail.com</a></div></div><div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Address</strong><span>346-Eden Canal Villas, Lahore</span></div></div></div></div><form class="contact-form reveal" id="contactForm"><div><label for="name">Name</label><input id="name" name="name" type="text" required placeholder="Your name"></div><div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required placeholder="03XX XXXXXXX"></div><div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"></div><div><label for="service">Service interested in</label><select id="service" name="service"><option>Solar</option><option>Electrical wiring</option><option>Structure cabling</option><option>Technical consultation</option><option>Other</option></select></div><div class="full"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell us briefly what you need..."></textarea></div><div class="form-status" id="formStatus" role="status">Opening WhatsApp with your inquiry...</div><div class="full"><button class="button blue" type="submit">Continue on WhatsApp <span class="arrow">↗</span></button></div></form></div></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="data:image/jpeg;base64,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" alt="The Electro Tech Solar official logo"><p>Quality solar and technical solutions supported by professional expertise and responsive customer service.</p></div><div><h4>Explore</h4><div class="footer-links"><a href="#home">Home</a><a href="#introduction">About us</a><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#shop">Shop</a><a href="#contact">Contact</a></div></div><div><h4>Capabilities</h4><div class="footer-links"><a href="#services">Structure cabling</a><a href="#services">Solar rank</a><a href="#services">Electrical wiring</a><a href="#technology">JINKO & SOLARMAX</a><a href="#savings">Savings calculator</a></div></div><div><h4>Contact</h4><div class="footer-contact"><a href="tel:+923224344626">+92-3224344626</a><a href="mailto:mukhtarhussain4pk@gmail.com">mukhtarhussain4pk@gmail.com</a><span>346-Eden Canal Villas, Lahore</span><a href="https://wa.me/923224344626?text=Hello%2C%20I%20would%20like%20a%20free%20solar%20consultation." target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> The Electro Tech Solar. All rights reserved.</span><span>QUALITY • PRICE • PERFORMANCE</span></div></div></footer>
+
+  <a class="float-whatsapp" href="https://wa.me/923224344626?text=Hello%2C%20I%20would%20like%20a%20free%20solar%20consultation." target="_blank" rel="noopener" aria-label="Chat with The Electro Tech Solar on WhatsApp"><span class="float-tooltip">Chat on WhatsApp</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.3zM12.1 21.5c-1.7 0-3.3-.4-4.8-1.3l-.3-.2-3.8 1 1-3.7-.2-.3a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.3 2.9 7 0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.5.1-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.1 3.3 5.1 4.5.7.3 1.2.5 1.6.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4 0-.2-.2-.3-.5-.4z"/></svg></a>
+
+  <script>
+    const WHATSAPP_NUMBER = "923224344626";
+    const intro = document.getElementById("intro");
+    const skipIntro = document.getElementById("skipIntro");
+    const hideIntro = () => { intro.classList.add("hide"); document.body.classList.remove("no-scroll"); sessionStorage.setItem("electroIntroSeen", "1"); };
+    if (sessionStorage.getItem("electroIntroSeen") === "1" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) intro.classList.add("hide");
+    else { document.body.classList.add("no-scroll"); window.setTimeout(hideIntro, 2600); }
+    skipIntro.addEventListener("click", hideIntro);
+
+    const header = document.getElementById("header");
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+    menuButton.addEventListener("click", () => { const open = navLinks.classList.toggle("open"); menuButton.classList.toggle("open", open); menuButton.setAttribute("aria-expanded", String(open)); });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => { navLinks.classList.remove("open"); menuButton.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); }));
+    window.addEventListener("scroll", () => header.classList.toggle("scrolled", window.scrollY > 15), { passive: true });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") { navLinks.classList.remove("open"); menuButton.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); if (!intro.classList.contains("hide")) hideIntro(); } });
+
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); } }), { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+    const sections = document.querySelectorAll("main section[id]");
+    const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
+    const activeObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { navAnchors.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id)); } }), { rootMargin: "-35% 0px -55%" });
+    sections.forEach(section => activeObserver.observe(section));
+
+    const heroVisual = document.getElementById("heroVisual");
+    heroVisual.addEventListener("pointermove", event => { const rect = heroVisual.getBoundingClientRect(); const x = (event.clientX - rect.left) / rect.width - .5; const y = (event.clientY - rect.top) / rect.height - .5; heroVisual.style.setProperty("--rx", (y * -13 + 7) + "deg"); heroVisual.style.setProperty("--ry", (x * 18 - 18) + "deg"); });
+    heroVisual.addEventListener("pointerleave", () => { heroVisual.style.setProperty("--rx", "7deg"); heroVisual.style.setProperty("--ry", "-18deg"); });
+
+    const bill = document.getElementById("bill");
+    const usage = document.getElementById("usage");
+    const sunHours = document.getElementById("sunHours");
+    const billValue = document.getElementById("billValue");
+    const usageValue = document.getElementById("usageValue");
+    const sunHoursValue = document.getElementById("sunHoursValue");
+    const systemResult = document.getElementById("systemResult");
+    const offsetResult = document.getElementById("offsetResult");
+    const monthlyResult = document.getElementById("monthlyResult");
+    const annualResult = document.getElementById("annualResult");
+    const paybackResult = document.getElementById("paybackResult");
+    const calculatorWhatsapp = document.getElementById("calculatorWhatsapp");
+    const formatPKR = value => "PKR " + Math.round(value).toLocaleString("en-PK");
+    function updateCalculator() {
+      const billNumber = Number(bill.value), usageNumber = Number(usage.value), sunNumber = Number(sunHours.value);
+      const estimatedSize = Math.max(.8, Math.min(25, usageNumber / (sunNumber * 30 * .82)));
+      const offset = Math.min(88, Math.max(48, Math.round((estimatedSize * sunNumber * 30 / usageNumber) * 100)));
+      const monthlySavings = billNumber * offset / 100;
+      const annualSavings = monthlySavings * 12;
+      const indicativeCost = estimatedSize * 230000;
+      const payback = indicativeCost / Math.max(annualSavings, 1);
+      billValue.textContent = formatPKR(billNumber); usageValue.textContent = usageNumber.toLocaleString("en-PK") + " kWh"; sunHoursValue.textContent = sunNumber.toFixed(1) + " hours";
+      systemResult.textContent = estimatedSize.toFixed(1) + " kW"; offsetResult.textContent = offset + "%"; monthlyResult.textContent = formatPKR(monthlySavings); annualResult.textContent = formatPKR(annualSavings); paybackResult.textContent = payback.toFixed(1) + " years";
+      const message = "Hello, I would like a free solar consultation. My approximate monthly electricity bill is " + formatPKR(billNumber) + ", usage is " + usageNumber + " kWh, and the calculator indicates approximately " + estimatedSize.toFixed(1) + " kW.";
+      calculatorWhatsapp.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    }
+    [bill, usage, sunHours].forEach(input => input.addEventListener("input", updateCalculator));
+    updateCalculator();
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+    contactForm.addEventListener("submit", event => { event.preventDefault(); if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; } const data = new FormData(contactForm); const message = "Hello, I would like a free consultation.\n\nName: " + data.get("name") + "\nPhone: " + data.get("phone") + "\nEmail: " + (data.get("email") || "Not provided") + "\nService: " + data.get("service") + "\nMessage: " + data.get("message"); formStatus.classList.add("show"); window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank", "noopener"); });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    /* ================= SHOP ENGINE ================= */
+    const SHOP_WHATSAPP_NUMBER = "923015673506";
+    const SHOP_PRODUCTS = [
+      // SOLAR PANELS — supplied catalogue
+      {id:'p-yingli-630',category:'panel',brand:'Yingli',model:'Yingli 630W N-Type Bifacial',wattage:'630W',type:'N-Type Bifacial',price:25200},
+      {id:'p-yingli-720',category:'panel',brand:'Yingli',model:'Yingli 720W N-Type Bifacial Solar Panel',wattage:'720W',type:'N-Type Bifacial',price:28800},
+      {id:'p-yingli-590',category:'panel',brand:'Yingli',model:'Yingli 590W N-Type Bifacial',wattage:'590W',type:'N-Type Bifacial',price:25370},
+      {id:'p-yingli-g6i5',category:'panel',brand:'Yingli',model:'Yingli G6I5W N-Type Bifacial Solar Panel',wattage:'G6I5W',type:'N-Type Bifacial',price:26445},
+      {id:'p-yingli-705',category:'panel',brand:'Yingli',model:'Yingli 705W N-Type Bifacial Solar Panel',wattage:'705W',type:'N-Type Bifacial',price:30315},
+      {id:'p-aiko-665',category:'panel',brand:'AIKO',model:'Aiko 665W 3N+ Series Bifacial Panel',wattage:'665W',type:'Bifacial',price:28928},
+      {id:'p-aiko-770',category:'panel',brand:'AIKO',model:'Aiko 770W Bifacial Panel',wattage:'770W',type:'Bifacial',price:34073},
+      {id:'p-aiko-650',category:'panel',brand:'AIKO',model:'Aiko 650W Monofacial Solar Panel',wattage:'650W',type:'Monofacial',price:28925},
+      {id:'p-aiko-655',category:'panel',brand:'AIKO',model:'Aiko 655W IN+ Series Bifacial Solar Panel',wattage:'655W',type:'Bifacial',price:28820},
+      {id:'p-aiko-625',category:'panel',brand:'AIKO',model:'Aiko 625W Mono Facial Solar Panel',wattage:'625W',type:'Monofacial',price:27187},
+      {id:'p-astro-620',category:'panel',brand:'Astronergy',model:'Astronergy 620W N-Type Bifacial Solar Panel',wattage:'620W',type:'N-Type Bifacial',price:24375},
+      {id:'p-astro-625',category:'panel',brand:'Astronergy',model:'Astronergy 625W N-Type Bifacial Panel',wattage:'625W',type:'N-Type Bifacial',price:28600},
+      {id:'p-astro-715',category:'panel',brand:'Astronergy',model:'Astronergy 715W Bifacial Solar Panel',wattage:'715W',type:'Bifacial',price:28800},
+      {id:'p-astro-720',category:'panel',brand:'Astronergy',model:'Astronergy 720W N-Type Bifacial Panel',wattage:'720W',type:'N-Type Bifacial',price:24800},
+      {id:'p-astro-580',category:'panel',brand:'Astronergy',model:'Astronergy 580W N-Type Bifacial Solar Panel',wattage:'580W',type:'N-Type Bifacial',price:22815},
+      {id:'p-astro-585a',category:'panel',brand:'Astronergy',model:'Astronergy 585W N-Type Bifacial Panel',wattage:'585W',type:'N-Type Bifacial',price:27495},
+      {id:'p-astro-585b',category:'panel',brand:'Astronergy',model:'Astronergy 585W N-Type Bifacial',wattage:'585W',type:'N-Type Bifacial',price:24360},
+      {id:'p-astro-590',category:'panel',brand:'Astronergy',model:'Astronergy 590W N-Type Bifacial Solar Panel',wattage:'590W',type:'N-Type Bifacial',price:23010},
+      {id:'p-astro-605',category:'panel',brand:'Astronergy',model:'Astronergy 605W N-Type Bifacial',wattage:'605W',type:'N-Type Bifacial',price:25410},
+      {id:'p-astro-610',category:'panel',brand:'Astronergy',model:'Astronergy 610W Bifacial Solar Panel',wattage:'610W',type:'Bifacial',price:26230},
+      {id:'p-astro-615',category:'panel',brand:'Astronergy',model:'Astronergy 615W N-Type Bifacial Solar Panel',wattage:'615W',type:'N-Type Bifacial',price:27305},
+      {id:'p-astro-635',category:'panel',brand:'Astronergy',model:'Astronergy 635W N-Type Bifacial',wattage:'635W',type:'N-Type Bifacial',price:26445},
+      {id:'p-astro-705',category:'panel',brand:'Astronergy',model:'Astronergy 705W N-Type Bifacial Solar Panel',wattage:'705W',type:'N-Type Bifacial',price:31725},
+      {id:'p-huasun-680',category:'panel',brand:'Huasun',model:'Huasun 680W Bifacial Solar Panel',wattage:'680W',type:'Bifacial',price:31280},
+      {id:'p-hanersun-620',category:'panel',brand:'Hanersun',model:'Hanersun 620W N Type Bifacial Solar Panel',wattage:'620W',type:'N-Type Bifacial',price:26040},
+      {id:'p-canadian-715',category:'panel',brand:'Canadian Solar',model:'Canadian 715W Bifacial Solar Panel',wattage:'715W',type:'Bifacial',price:30030},
+      {id:'p-canadian-710',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 710W N-Type Bifacial Panel',wattage:'710W',type:'N-Type Bifacial',price:30885},
+      {id:'p-canadian-580',category:'panel',brand:'Canadian Solar',model:'Canadian 580W N-Type Bifacial',wattage:'580W',type:'N-Type Bifacial',price:26680},
+      {id:'p-canadian-585',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 585W N-Type Bifacial',wattage:'585W',type:'N-Type Bifacial',price:24278},
+      {id:'p-canadian-590',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 590W N-Type Bifacial',wattage:'590W',type:'N-Type Bifacial',price:28670},
+      {id:'p-canadian-610',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 610W N-Type Bifacial',wattage:'610W',type:'N-Type Bifacial',price:29827},
+      {id:'p-canadian-615',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 615W N-Type Bifacial',wattage:'615W',type:'N-Type Bifacial',price:24485},
+      {id:'p-canadian-620',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 620W N-Type Bifacial Panel',wattage:'620W',type:'N-Type Bifacial',price:26040},
+      {id:'p-canadian-630',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 630W N-Type Bifacial',wattage:'630W',type:'N-Type Bifacial',price:30555},
+      {id:'p-canadian-hjt635',category:'panel',brand:'Canadian Solar',model:'Canadian HJT 635W N-Type Bifacial',wattage:'635W',type:'N-Type Bifacial',price:27622},
+      {id:'p-canadian-700',category:'panel',brand:'Canadian Solar',model:'Canadian Solar 700W N-Type Bifacial',wattage:'700W',type:'N-Type Bifacial',price:33600},
+      {id:'p-risen-740',category:'panel',brand:'Risen',model:'Risen HJT 740W Bifacial Solar Panel',wattage:'740W',type:'HJT Bifacial',price:31080},
+      {id:'p-risen-585',category:'panel',brand:'Risen',model:'Risen 585W N-Type Bifacial',wattage:'585W',type:'N-Type Bifacial',price:25155},
+      {id:'p-risen-700',category:'panel',brand:'Risen',model:'Risen 700W HIT Bifacial',wattage:'700W',type:'HIT Bifacial',price:32900},
+      {id:'p-ja-625',category:'panel',brand:'JA Solar',model:'JA 625W Bifacial Solar Panel',wattage:'625W',type:'Bifacial',price:24375},
+      {id:'p-ja-595',category:'panel',brand:'JA Solar',model:'JA 595W N-Type Bifacial',wattage:'595W',type:'N-Type Bifacial',price:24097},
+      {id:'p-ja-620',category:'panel',brand:'JA Solar',model:'JA 620W N-Type Bifacial',wattage:'620W',type:'N-Type Bifacial',price:25730},
+      {id:'p-ja-720',category:'panel',brand:'JA Solar',model:'JA 720W N-Type Bifacial',wattage:'720W',type:'N-Type Bifacial',price:29160},
+      {id:'p-ja-585',category:'panel',brand:'JA Solar',model:'JA Solar 585W N-Type Bifacial Panel',wattage:'585W',type:'N-Type Bifacial',price:23400},
+      {id:'p-ja-590',category:'panel',brand:'JA Solar',model:'JA Solar 590W N-Type Bifacial Panel',wattage:'590W',type:'N-Type Bifacial',price:23010},
+      {id:'p-ja-605',category:'panel',brand:'JA Solar',model:'JA Solar 605W N-Type Bifacial',wattage:'605W',type:'N-Type Bifacial',price:24986},
+      {id:'p-ja-610',category:'panel',brand:'JA Solar',model:'JA Solar 610W N-Type Bifacial',wattage:'610W',type:'N-Type Bifacial',price:26630},
+      {id:'p-ja-705',category:'panel',brand:'JA Solar',model:'JA Solar 705W N-Type Bifacial Panel',wattage:'705W',type:'N-Type Bifacial',price:31725},
+      {id:'p-ja-710',category:'panel',brand:'JA Solar',model:'JA Solar 710W N-Type Bifacial Panel',wattage:'710W',type:'N-Type Bifacial',price:28755},
+      {id:'p-tcl-620',category:'panel',brand:'TCL Solar',model:'TCL Solar 620W Bifacial Solar Panel',wattage:'620W',type:'Bifacial',price:23250},
+      {id:'p-tcl-720',category:'panel',brand:'TCL Solar',model:'TCL Solar 720W Bifacial Solar Panel',wattage:'720W',type:'Bifacial',price:27000},
+      {id:'p-ronma-620',category:'panel',brand:'Ronma Solar',model:'Ronma Solar 620W Bifacial Panel',wattage:'620W',type:'Bifacial',price:23870},
+      {id:'p-jinko-725',category:'panel',brand:'Jinko',model:'Jinko 725W N-Type Bifacial',wattage:'725W',type:'N-Type Bifacial',price:31175},
+      {id:'p-jinko-tiger-645',category:'panel',brand:'Jinko',model:'Jinko Tiger Neo 3.0 645W Bifacial Solar Panel',wattage:'645W',type:'Bifacial',price:26292},
+      {id:'p-jinko-590mono',category:'panel',brand:'Jinko',model:'Jinko 590W Mono-Facial',wattage:'590W',type:'Monofacial',price:25370},
+      {id:'p-jinko-620',category:'panel',brand:'Jinko',model:'Jinko 620W N-Type Bifacial',wattage:'620W',type:'N-Type Bifacial',price:26660},
+      {id:'p-jinko-630',category:'panel',brand:'Jinko',model:'Jinko 630W N-Type Bifacial',wattage:'630W',type:'N-Type Bifacial',price:29610},
+      {id:'p-jinko-640',category:'panel',brand:'Jinko',model:'Jinko 640W N Type Bifacial Panel',wattage:'640W',type:'N-Type Bifacial',price:29760},
+      {id:'p-jinko-705',category:'panel',brand:'Jinko',model:'Jinko 705W N Type Bifacial Panel',wattage:'705W',type:'N-Type Bifacial',price:33135},
+      {id:'p-jinko-720',category:'panel',brand:'Jinko',model:'Jinko 720W N-Type Bifacial',wattage:'720W',type:'N-Type Bifacial',price:33840},
+      {id:'p-jinko-bdx585',category:'panel',brand:'Jinko',model:'Jinko BDX 585W N-Type Bifacial Panel',wattage:'585W',type:'N-Type Bifacial',price:28138},
+      {id:'p-jinko-585mono',category:'panel',brand:'Jinko',model:'Jinko 585W Monofacial Solar Panel',wattage:'585W',type:'Monofacial',price:25155},
+      {id:'p-jinko-585bi',category:'panel',brand:'Jinko',model:'Jinko 585W Bifacial Solar Panel',wattage:'585W',type:'Bifacial',price:23400},
+      {id:'p-jinko-590',category:'panel',brand:'Jinko',model:'Jinko 590W N-Type Bifacial Solar Panel',wattage:'590W',type:'N-Type Bifacial',price:26550},
+      {id:'p-jinko-595',category:'panel',brand:'Jinko',model:'Jinko 595W Monofacial Solar Panel',wattage:'595W',type:'Monofacial',price:26180},
+      {id:'p-jinko-610',category:'panel',brand:'Jinko',model:'Jinko 610W N-Type Bifacial Solar Panel',wattage:'610W',type:'N-Type Bifacial',price:28670},
+      {id:'p-jinko-615',category:'panel',brand:'Jinko',model:'Jinko 615W N-Type Bifacial Solar Panel',wattage:'615W',type:'N-Type Bifacial',price:28905},
+      {id:'p-jinko-715',category:'panel',brand:'Jinko',model:'Jinko 715W N-Type Bifacial Solar Panel',wattage:'715W',type:'N-Type Bifacial',price:31388},
+      {id:'p-znshine-585',category:'panel',brand:'ZNShine',model:'ZNShine 585W N-Type Bifacial',wattage:'585W',type:'N-Type Bifacial',price:25740},
+      {id:'p-mesol-585',category:'panel',brand:'Mesol Alpha',model:'Mesol Alpha 585W N-Type Bifacial Panel',wattage:'585W',type:'N-Type Bifacial',price:22522},
+      {id:'p-mesol-620',category:'panel',brand:'Mesol Alpha',model:'Mesol Alpha 620W N-Type Bifacial Panel',wattage:'620W',type:'N-Type Bifacial',price:26660},
+      {id:'p-mesol-710',category:'panel',brand:'Mesol Alpha',model:'Mesol Alpha 710W N-Type Bifacial Panel',wattage:'710W',type:'N-Type Bifacial',price:30530},
+      {id:'p-longi-x7-620',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X7 620W Bifacial Panel',wattage:'620W',type:'Bifacial',price:26040},
+      {id:'p-longi-x10-650',category:'panel',brand:'LONGi',model:'Longi Hi-MO X10 650W Bifacial Panel',wattage:'650W',type:'Bifacial',price:28600},
+      {id:'p-longi-x6-590',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X6 590W Monofacial Panel',wattage:'590W',type:'Monofacial',price:25960},
+      {id:'p-longi-x7-590',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X7 590W Bifacial Panel',wattage:'590W',type:'Bifacial',price:25960},
+      {id:'p-longi-x7-605',category:'panel',brand:'LONGi',model:'Longi Hi-MO X7 605W Bifacial',wattage:'605W',type:'Bifacial',price:26620},
+      {id:'p-longi-x7-610',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X7 610W N-Type Bifacial',wattage:'610W',type:'N-Type Bifacial',price:27060},
+      {id:'p-longi-615',category:'panel',brand:'LONGi',model:'Longi Hi-MO 7 615W 18BB Bifacial Panel',wattage:'615W',type:'Bifacial',price:28160},
+      {id:'p-longi-x10-640m',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X10 640W Monofacial Panel',wattage:'640W',type:'Monofacial',price:26840},
+      {id:'p-longi-x10-640b',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X10 640W Bifacial Panel',wattage:'640W',type:'Bifacial',price:28160},
+      {id:'p-longi-x10-645m',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X10 645W Monofacial Panel',wattage:'645W',type:'Monofacial',price:28380},
+      {id:'p-longi-x10-645b',category:'panel',brand:'LONGi',model:'LONGi Hi-MO X10 645W Bifacial Panel',wattage:'645W',type:'Bifacial',price:28058},
+      {id:'p-osda-585',category:'panel',brand:'OSDA',model:'Osda 585W N-Type Bifacial Solar Panel',wattage:'585W',type:'N-Type Bifacial',price:21645},
+      {id:'p-trina-630',category:'panel',brand:'Trina Solar',model:'Trina 630W Bifacial Solar Panel',wattage:'630W',type:'Bifacial',price:25200},
+      {id:'p-trina-715',category:'panel',brand:'Trina Solar',model:'Trina 715W Bifacial Solar Panel',wattage:'715W',type:'Bifacial',price:29672},
+      {id:'p-trina-725',category:'panel',brand:'Trina Solar',model:'Trina 725W Bifacial Solar Panel',wattage:'725W',type:'Bifacial',price:29000},
+      {id:'p-trina-720',category:'panel',brand:'Trina Solar',model:'Trina 720W N-Type Bifacial',wattage:'720W',type:'N-Type Bifacial',price:29520},
+      {id:'p-trina-585',category:'panel',brand:'Trina Solar',model:'Trina 585W N-Type Bifacial Solar Panel',wattage:'585W',type:'N-Type Bifacial',price:25740},
+      {id:'p-trina-590',category:'panel',brand:'Trina Solar',model:'Trina Solar 590W N-Type Bifacial Panel',wattage:'590W',type:'N-Type Bifacial',price:25960},
+      {id:'p-trina-610',category:'panel',brand:'Trina Solar',model:'Trina Solar 610W N-Type Bifacial Panel',wattage:'610W',type:'N-Type Bifacial',price:26840},
+      {id:'p-trina-615',category:'panel',brand:'Trina Solar',model:'Trina 615W N-Type Bifacial Solar Panel',wattage:'615W',type:'N-Type Bifacial',price:26137},
+      {id:'p-trina-620',category:'panel',brand:'Trina Solar',model:'Trina Solar 620W N-Type Bifacial',wattage:'620W',type:'N-Type Bifacial',price:26970},
+      {id:'p-trina-625',category:'panel',brand:'Trina Solar',model:'Trina 625W N-Type Bifacial Solar Panel',wattage:'625W',type:'N-Type Bifacial',price:27187},
+      {id:'p-trina-710',category:'panel',brand:'Trina Solar',model:'Trina 710W N-Type Bifacial Solar Panel',wattage:'710W',type:'N-Type Bifacial',price:29110},
+      {id:'p-tongwei-585',category:'panel',brand:'Tongwei',model:'Tongwei 585W N-Type Bifacial Solar Panel',wattage:'585W',type:'N-Type Bifacial',price:25155},
+      {id:'p-tongwei-590',category:'panel',brand:'Tongwei',model:'Tongwei 590W N-Type Bifacial Solar Panel',wattage:'590W',type:'N-Type Bifacial',price:25370},
+      {id:'p-tongwei-615',category:'panel',brand:'Tongwei',model:'Tongwei 615W N-Type Bifacial Solar Panel',wattage:'615W',type:'N-Type Bifacial',price:26445},
+      {id:'p-cora-615',category:'panel',brand:'Cora Dawn',model:'Cora Dawn 615W Bifacial Solar Panel',wattage:'615W',type:'Bifacial',price:23062},
+      // ON-GRID INVERTERS — supplied catalogue
+      {id:'i-canadian-10',category:'inverter',brand:'Canadian',model:'Canadian 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:175000},
+      {id:'i-canadian-15',category:'inverter',brand:'Canadian',model:'Canadian 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:225000},
+      {id:'i-canadian-20',category:'inverter',brand:'Canadian',model:'Canadian 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:270000},
+      {id:'i-canadian-25',category:'inverter',brand:'Canadian',model:'Canadian 25kW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:300000},
+      {id:'i-fox-3.3',category:'inverter',brand:'Fox',model:'Fox G-2 3.3kW Ongrid Inverter 1 Phase',capacity:'3.3kW',phase:'1 Phase',ip:'IP65',warranty:'10Y',price:86500},
+      {id:'i-fox-5',category:'inverter',brand:'Fox',model:'Fox T5-G3 5kW Ongrid Inverter 3 Phase',capacity:'5kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:101500},
+      {id:'i-fox-8',category:'inverter',brand:'Fox',model:'Fox T8-G3 8kW Ongrid Inverter 3 Phase',capacity:'8kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:163000},
+      {id:'i-fox-10',category:'inverter',brand:'Fox',model:'Fox T10-G3 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:178000},
+      {id:'i-fox-12',category:'inverter',brand:'Fox',model:'Fox T12-G3 12kW Ongrid Inverter 3 Phase',capacity:'12kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:203000},
+      {id:'i-fox-15',category:'inverter',brand:'Fox',model:'Fox T15-G3 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:233000},
+      {id:'i-fox-17',category:'inverter',brand:'Fox',model:'Fox T17-G3 17kW Ongrid Inverter 3 Phase',capacity:'17kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:260000},
+      {id:'i-fox-20',category:'inverter',brand:'Fox',model:'Fox T20-G3 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:274000},
+      {id:'i-fox-25',category:'inverter',brand:'Fox',model:'Fox T25-G3 25kW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:299000},
+      {id:'i-fox-36',category:'inverter',brand:'Fox',model:'Fox 36kW Ongrid Inverter 3 Phase',capacity:'36kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:429000},
+      {id:'i-fox-50',category:'inverter',brand:'Fox',model:'Fox 50kW Ongrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:559000},
+      {id:'i-fox-60',category:'inverter',brand:'Fox',model:'Fox 60kW Ongrid Inverter 3 Phase',capacity:'60kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:641000},
+      {id:'i-fox-75',category:'inverter',brand:'Fox',model:'Fox 75kW Ongrid Inverter 3 Phase',capacity:'75kW',phase:'3 Phase',ip:'65',warranty:'5Y',price:795000},
+      {id:'i-fox-100',category:'inverter',brand:'Fox',model:'Fox 100kW Ongrid Inverter 3 Phase',capacity:'100kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:910000},
+      {id:'i-fox-110',category:'inverter',brand:'Fox',model:'Fox T110kW Ongrid Inverter 3 Phase',capacity:'110kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:941000},
+      {id:'i-fox-125',category:'inverter',brand:'Fox',model:'Fox 125kW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:985000},
+      {id:'i-solarmax-20',category:'inverter',brand:'SolarMax',model:'SolarMax 20kW 6G3P On-Grid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:290000},
+      {id:'i-solarmax-25',category:'inverter',brand:'SolarMax',model:'SolarMax 25kW 6G3P On-Grid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:345000},
+      {id:'i-sofar-11',category:'inverter',brand:'Sofar',model:'Sofar 11kW Ongrid Inverter 3 Phase',capacity:'11kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:165000},
+      {id:'i-sofar-15',category:'inverter',brand:'Sofar',model:'Sofar 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:220000},
+      {id:'i-goodwe-5',category:'inverter',brand:'GoodWe',model:'GoodWe 5kW OnGrid Inverter Single Phase',capacity:'5kW',phase:'Single Phase',ip:'IP66',warranty:'5Y',price:145000},
+      {id:'i-goodwe-10',category:'inverter',brand:'GoodWe',model:'GoodWe 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'10Y',price:170000},
+      {id:'i-goodwe-15',category:'inverter',brand:'GoodWe',model:'GoodWe 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'10Y',price:225000},
+      {id:'i-goodwe-20',category:'inverter',brand:'GoodWe',model:'GoodWe 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'10Y',price:275000},
+      {id:'i-goodwe-25',category:'inverter',brand:'GoodWe',model:'GoodWe 25kW OnGrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:340000},
+      {id:'i-goodwe-30',category:'inverter',brand:'GoodWe',model:'GoodWe 30kW OnGrid Inverter 3 Phase',capacity:'30kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:360000},
+      {id:'i-goodwe-50',category:'inverter',brand:'GoodWe',model:'GoodWe 50kW OnGrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:475000},
+      {id:'i-goodwe-60',category:'inverter',brand:'GoodWe',model:'GoodWe 60kW Ongrid Inverter 3 Phase',capacity:'60kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:575000},
+      {id:'i-goodwe-80',category:'inverter',brand:'GoodWe',model:'GoodWe 80kW OnGrid Inverter 3 Phase',capacity:'80kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:850000},
+      {id:'i-goodwe-100',category:'inverter',brand:'GoodWe',model:'GoodWe 100kW OnGrid Inverter 3 Phase',capacity:'100kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:995000},
+      {id:'i-goodwe-125',category:'inverter',brand:'GoodWe',model:'GoodWe 125kW OnGrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1225000},
+      {id:'i-goodwe-150',category:'inverter',brand:'GoodWe',model:'GoodWe 150kW OnGrid Inverter 3 Phase',capacity:'150kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1250000},
+      {id:'i-sineng-10',category:'inverter',brand:'Sineng',model:'Sineng 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:165000},
+      {id:'i-sineng-12',category:'inverter',brand:'Sineng',model:'Sineng 12kW Ongrid Inverter 3 Phase',capacity:'12kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:195000},
+      {id:'i-sineng-15',category:'inverter',brand:'Sineng',model:'Sineng 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:225000},
+      {id:'i-sineng-20',category:'inverter',brand:'Sineng',model:'Sineng 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:275000},
+      {id:'i-sineng-25',category:'inverter',brand:'Sineng',model:'Sineng 25kW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:300000},
+      {id:'i-sineng-30',category:'inverter',brand:'Sineng',model:'Sineng 30kW Ongrid Inverter 3 Phase',capacity:'30kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:360000},
+      {id:'i-sineng-40',category:'inverter',brand:'Sineng',model:'Sineng 40kW Ongrid Inverter 3 Phase',capacity:'40kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:455000},
+      {id:'i-sineng-60',category:'inverter',brand:'Sineng',model:'Sineng 60kW Ongrid Inverter 3 Phase',capacity:'60kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:575000},
+      {id:'i-sineng-125',category:'inverter',brand:'Sineng',model:'Sineng 125kW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:900000},
+      {id:'i-growatt-10',category:'inverter',brand:'Growatt',model:'Growatt 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:165000},
+      {id:'i-growatt-10x2',category:'inverter',brand:'Growatt',model:'Growatt 10kW X2 Pro OnGrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:170000},
+      {id:'i-growatt-15',category:'inverter',brand:'Growatt',model:'Growatt 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:228000},
+      {id:'i-growatt-15x2',category:'inverter',brand:'Growatt',model:'Growatt 15kW X2 Pro OnGrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:205000},
+      {id:'i-growatt-20',category:'inverter',brand:'Growatt',model:'Growatt 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:265000},
+      {id:'i-growatt-25',category:'inverter',brand:'Growatt',model:'Growatt 25kW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:290000},
+      {id:'i-growatt-33',category:'inverter',brand:'Growatt',model:'Growatt 33kW Ongrid Inverter 3 Phase',capacity:'33kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:375000},
+      {id:'i-growatt-40',category:'inverter',brand:'Growatt',model:'Growatt 40kW Ongrid Inverter 3 Phase',capacity:'40kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:455000},
+      {id:'i-growatt-50',category:'inverter',brand:'Growatt',model:'Growatt 50kW OnGrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:555000},
+      {id:'i-growatt-60',category:'inverter',brand:'Growatt',model:'Growatt 60kW OnGrid Inverter 3 Phase',capacity:'60kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:645000},
+      {id:'i-growatt-100',category:'inverter',brand:'Growatt',model:'Growatt 100kW Ongrid Inverter 3 Phase',capacity:'100kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:915000},
+      {id:'i-growatt-125',category:'inverter',brand:'Growatt',model:'Growatt 125kW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:1010000},
+      {id:'i-growatt-150',category:'inverter',brand:'Growatt',model:'Growatt 150kW Ongrid Inverter 3 Phase',capacity:'150kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:1210000},
+      {id:'i-huawei-5',category:'inverter',brand:'Huawei',model:'Huawei 5kW Sun2000-M1 OnGrid Inverter',capacity:'5kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:185000},
+      {id:'i-huawei-10',category:'inverter',brand:'Huawei',model:'Huawei 10kW Sun2000-M1 Ongrid Inverter',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:255000},
+      {id:'i-huawei-12',category:'inverter',brand:'Huawei',model:'Huawei 12kW Sun2000-M5 Ongrid Inverter',capacity:'12kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:290000},
+      {id:'i-huawei-15',category:'inverter',brand:'Huawei',model:'Huawei 15kW Sun2000-M5 Ongrid Inverter',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:315000},
+      {id:'i-huawei-20',category:'inverter',brand:'Huawei',model:'Huawei 20kW Sun2000-M5 Ongrid Inverter',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:340000},
+      {id:'i-huawei-25',category:'inverter',brand:'Huawei',model:'Huawei 25kW Sun2000-M5 Zero Ongrid Inverter',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:380000},
+      {id:'i-huawei-30',category:'inverter',brand:'Huawei',model:'Huawei 30kW Sun2000-M3 Ongrid Inverter',capacity:'30kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:595000},
+      {id:'i-huawei-50',category:'inverter',brand:'Huawei',model:'Huawei 50kW Sun2000-M3 Ongrid Inverter',capacity:'50kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:675000},
+      {id:'i-huawei-115',category:'inverter',brand:'Huawei',model:'Huawei 115kW Sun2000-M2 Ongrid Inverter',capacity:'115kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1275000},
+      {id:'i-huawei-150',category:'inverter',brand:'Huawei',model:'Huawei 150kW Sun2000-M6O OnGrid Inverter',capacity:'150kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1725000},
+      {id:'i-huawei-330',category:'inverter',brand:'Huawei',model:'Huawei 330kW Sun2000-H2 OnGrid Inverter',capacity:'330kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:2600000},
+      {id:'i-inverex-10',category:'inverter',brand:'Inverex',model:'Inverex 10KW Ongrid Inverter',capacity:'10kW',phase:'3 Phase',warranty:'10Y',price:203000},
+      {id:'i-inverex-15',category:'inverter',brand:'Inverex',model:'Inverex 15KW Ongrid Inverter',capacity:'15kW',phase:'3 Phase',warranty:'10Y',price:308000},
+      {id:'i-inverex-20',category:'inverter',brand:'Inverex',model:'Inverex 20KW Ongrid Inverter',capacity:'20kW',phase:'3 Phase',warranty:'10Y',price:355000},
+      {id:'i-inverex-25',category:'inverter',brand:'Inverex',model:'Inverex 25KW Ongrid Inverter',capacity:'25kW',phase:'3 Phase',warranty:'5Y',price:605000},
+      {id:'i-inverex-50',category:'inverter',brand:'Inverex',model:'Inverex 50KW Ongrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'10Y',price:625000},
+      {id:'i-inverex-100',category:'inverter',brand:'Inverex',model:'Inverex 100KW Ongrid Inverter 3 Phase',capacity:'100kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:1510000},
+      {id:'i-knox-asw5',category:'inverter',brand:'KNOX',model:'KNOX ASW 5000-T Ongrid Inverter',capacity:'5kW',phase:'3 Phase',price:130000},
+      {id:'i-knox-asw12',category:'inverter',brand:'KNOX',model:'KNOX ASW 12K-LT-G2 On-Grid Inverter',capacity:'12kW',phase:'3 Phase',price:195000},
+      {id:'i-knox-asw13',category:'inverter',brand:'KNOX',model:'KNOX ASW13K-LT-G2 On-Grid Inverter',capacity:'13kW',phase:'3 Phase',price:200000},
+      {id:'i-knox-asw6',category:'inverter',brand:'KNOX',model:'KNOX ASW6000-T Ongrid Inverter',capacity:'6kW',phase:'3 Phase',price:135000},
+      {id:'i-knox-45',category:'inverter',brand:'KNOX',model:'KNOX G2 45kW On-Grid Inverter',capacity:'45kW',phase:'3 Phase',price:170000},
+      {id:'i-knox-xerox10',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 10KW On-Grid Inverter',capacity:'10kW',price:450000},
+      {id:'i-knox-xerox10p',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 10.2KW On-Grid Inverter',capacity:'10.2kW',price:185000},
+      {id:'i-knox-xerox125',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 125kW Ongrid Inverter',capacity:'125kW',price:1050000},
+      {id:'i-knox-xerox152',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 15.2KW On-Grid Inverter',capacity:'15.2kW',price:220000},
+      {id:'i-knox-xerox202',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 20.2KW On-Grid Inverter',capacity:'20.2kW',price:270000},
+      {id:'i-knox-xerox252',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 25.2kW On-Grid Inverter',capacity:'25.2kW',price:300000},
+      {id:'i-knox-xerox3045',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 30k/45kPV Ongrid Inverter',capacity:'30k/45kPV',price:360000},
+      {id:'i-knox-xerox5075',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 50k/75kPV On-Grid Inverter',capacity:'50k/75kPV',price:460000},
+      {id:'i-knox-xerox6090',category:'inverter',brand:'KNOX',model:'KNOX XEROX G4 Pro 60k/90kPV On-Grid Inverter',capacity:'60k/90kPV',price:510000},
+      {id:'i-sma-110',category:'inverter',brand:'SMA',model:'SMA Sunny Tripower CORE2 STP 110KW Ongrid Inverter 3 Phase',capacity:'110kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1300000},
+      {id:'i-chint-10',category:'inverter',brand:'Chint',model:'Chint 10kW OnGrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:140000},
+      {id:'i-chint-15',category:'inverter',brand:'Chint',model:'Chint 15kW OnGrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:150000},
+      {id:'i-chint-20',category:'inverter',brand:'Chint',model:'Chint 20kW OnGrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:260000},
+      {id:'i-chint-25',category:'inverter',brand:'Chint',model:'Chint 25kW OnGrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:275000},
+      {id:'i-chint-30',category:'inverter',brand:'Chint',model:'Chint 30kW OnGrid Inverter 3 Phase',capacity:'30kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:300000},
+      {id:'i-chint-50',category:'inverter',brand:'Chint',model:'Chint 50kW OnGrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:null},
+      {id:'i-chint-125',category:'inverter',brand:'Chint',model:'Chint 125kW OnGrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1090000},
+      {id:'i-maxpower-10',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 10kW OnGrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:180000},
+      {id:'i-maxpower-15',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 15kW OnGrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:215000},
+      {id:'i-maxpower-20',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 20kW OnGrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:285000},
+      {id:'i-maxpower-24',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 24kW OnGrid Inverter 3 Phase',capacity:'24kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:332000},
+      {id:'i-maxpower-30',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 30kW OnGrid Inverter 3 Phase',capacity:'30kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:423000},
+      {id:'i-maxpower-50',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 50kW OnGrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:496000},
+      {id:'i-maxpower-80',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 80kW OnGrid Inverter 3 Phase',capacity:'80kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:725000},
+      {id:'i-maxpower-125',category:'inverter',brand:'MaxPower',model:'Maxpower Sofar 125kW OnGrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:961000},
+      {id:'i-livoltek-6',category:'inverter',brand:'Livoltek',model:'Livoltek 6kW Ongrid Inverter 1 Phase',capacity:'6kW',phase:'1 Phase',ip:'IP65',warranty:'5Y',price:118000},
+      {id:'i-livoltek-10',category:'inverter',brand:'Livoltek',model:'Livoltek 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:148500},
+      {id:'i-livoltek-15',category:'inverter',brand:'Livoltek',model:'Livoltek 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:180000},
+      {id:'i-livoltek-20',category:'inverter',brand:'Livoltek',model:'Livoltek 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:200000},
+      {id:'i-livoltek-25',category:'inverter',brand:'Livoltek',model:'Livoltek 25kW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:280000},
+      {id:'i-livoltek-50',category:'inverter',brand:'Livoltek',model:'Livoltek 50kW Ongrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:425000},
+      {id:'i-livoltek-125',category:'inverter',brand:'Livoltek',model:'Livoltek 125kW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:910000},
+      {id:'i-luminey-10',category:'inverter',brand:'Luminey',model:'Luminay 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:170000},
+      {id:'i-solis-10',category:'inverter',brand:'Solis',model:'Solis 10KW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:200000},
+      {id:'i-solis-12',category:'inverter',brand:'Solis',model:'Solis 12KW Ongrid Inverter 3 Phase',capacity:'12kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:239000},
+      {id:'i-solis-15',category:'inverter',brand:'Solis',model:'Solis 15KW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:240000},
+      {id:'i-solis-20',category:'inverter',brand:'Solis',model:'Solis 20KW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:280000},
+      {id:'i-solis-25',category:'inverter',brand:'Solis',model:'Solis 25KW Ongrid Inverter 3 Phase',capacity:'25kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:397000},
+      {id:'i-solis-30',category:'inverter',brand:'Solis',model:'Solis 30kW Ongrid Inverter 3 Phase',capacity:'30kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:440000},
+      {id:'i-solis-40',category:'inverter',brand:'Solis',model:'Solis 40KW Ongrid Inverter 3 Phase',capacity:'40kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:540000},
+      {id:'i-solis-50',category:'inverter',brand:'Solis',model:'Solis 50KW Ongrid Inverter 3 Phase',capacity:'50kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:570000},
+      {id:'i-solis-60',category:'inverter',brand:'Solis',model:'Solis 60KW Ongrid Inverter 3 Phase',capacity:'60kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:625000},
+      {id:'i-solis-110',category:'inverter',brand:'Solis',model:'Solis 110KW Ongrid Inverter 3 Phase',capacity:'110kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1050000},
+      {id:'i-solis-125',category:'inverter',brand:'Solis',model:'Solis 125KW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1000000},
+      {id:'i-solis-150',category:'inverter',brand:'Solis',model:'Solis 150kW OnGrid Inverter 3 Phase',capacity:'150kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1200000},
+      {id:'i-sungrow-10',category:'inverter',brand:'Sungrow',model:'Sungrow 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:208000},
+      {id:'i-sungrow-15',category:'inverter',brand:'Sungrow',model:'Sungrow 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:255000},
+      {id:'i-sungrow-20',category:'inverter',brand:'Sungrow',model:'Sungrow 20kW Ongrid Inverter 3 Phase',capacity:'20kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:325000},
+      {id:'i-sungrow-125',category:'inverter',brand:'Sungrow',model:'Sungrow 125kW Ongrid Inverter 3 Phase',capacity:'125kW',phase:'3 Phase',ip:'IP66',warranty:'5Y',price:1390000},
+      {id:'i-ziewnic-10',category:'inverter',brand:'Ziewnic',model:'SUN TL-M2 10kW Ongrid Inverter 3 Phase',capacity:'10kW',phase:'3 Phase',ip:'IP65',warranty:'5Y',price:175000},
+      {id:'i-crown-12',category:'inverter',brand:'Crown',model:'Crown Voltmore 12kW Ongrid Inverter 3 Phase',capacity:'12kW',phase:'3 Phase',ip:'IP66',warranty:'10Y',price:177000},
+      {id:'i-crown-15',category:'inverter',brand:'Crown',model:'Crown Voltmore 15kW Ongrid Inverter 3 Phase',capacity:'15kW',phase:'3 Phase',ip:'IP66',warranty:'10Y',price:212000}
+    ];
+
+    const money = value => value == null ? "Call for Price" : "PKR " + Number(value).toLocaleString("en-PK");
+    const shopGrid = document.getElementById("shopGrid");
+    const shopSearch = document.getElementById("shopSearch");
+    const shopCategory = document.getElementById("shopCategory");
+    const shopEmpty = document.getElementById("shopEmpty");
+    const shopProductCount = document.getElementById("shopProductCount");
+    const cartCount = document.getElementById("cartCount");
+    const cartWrap = document.getElementById("cartWrap");
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+    const productModal = document.getElementById("productModal");
+    const checkoutModal = document.getElementById("checkoutModal");
+    let cart = JSON.parse(localStorage.getItem("electroTechCart") || "[]");
+    let selectedProduct = null;
+
+    shopProductCount.textContent = SHOP_PRODUCTS.length;
+    const escapeHtml = value => String(value ?? "").replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+    const PANEL_SOURCE_IMAGE = "data:image/png;base64,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";
+    const INVERTER_SOURCE_IMAGE = "data:image/png;base64,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";
+    const productArt = product => product.category === 'panel'
+      ? `<img class="product-source-image" src="${PANEL_SOURCE_IMAGE}" alt="${escapeHtml(product.model)} solar panel image from supplied catalogue" loading="lazy">`
+      : `<img class="product-source-image" src="${INVERTER_SOURCE_IMAGE}" alt="${escapeHtml(product.model)} inverter image from supplied catalogue" loading="lazy">`;
+    const productCartArt = product => product.category === 'panel'
+      ? `<img class="cart-source-image" src="${PANEL_SOURCE_IMAGE}" alt="">`
+      : `<img class="cart-source-image" src="${INVERTER_SOURCE_IMAGE}" alt="">`;
+    const productModalArt = product => product.category === 'panel'
+      ? `<img class="modal-source-image" src="${PANEL_SOURCE_IMAGE}" alt="${escapeHtml(product.model)} solar panel image from supplied catalogue">`
+      : `<img class="modal-source-image" src="${INVERTER_SOURCE_IMAGE}" alt="${escapeHtml(product.model)} inverter image from supplied catalogue">`;
+
+    function renderProducts(){
+      const term = shopSearch.value.trim().toLowerCase();
+      const category = shopCategory.value;
+      const filtered = SHOP_PRODUCTS.filter(p => {
+        const hay = [p.brand,p.model,p.wattage,p.type,p.capacity,p.phase,p.ip].filter(Boolean).join(" ").toLowerCase();
+        return (category === "all" || p.category === category) && (!term || hay.includes(term));
+      });
+      shopGrid.innerHTML = filtered.map(p => `<article class="product-card"><div class="product-art"><span class="product-badge">${p.category === 'panel' ? 'Solar Panel' : 'On-Grid'}</span>${productArt(p)}</div><div class="product-body"><div class="product-brand">${escapeHtml(p.brand)}</div><h3 class="product-name">${escapeHtml(p.model)}</h3><div class="product-meta">${p.wattage ? `<span>${escapeHtml(p.wattage)}</span>` : `<span>${escapeHtml(p.capacity || '')}</span>`}${p.type ? `<span>${escapeHtml(p.type)}</span>` : ''}${p.phase ? `<span>${escapeHtml(p.phase)}</span>` : ''}${p.warranty ? `<span>${escapeHtml(p.warranty)}</span>` : ''}</div><div class="product-bottom"><div class="product-price">${money(p.price)}<small>${p.price == null ? 'Catalogue status' : 'Listed catalogue price'}</small></div><div class="product-actions"><button class="icon-btn" type="button" data-view="${p.id}">View</button><button class="icon-btn" type="button" data-add="${p.id}" ${p.price == null ? 'disabled' : ''}>Add to Cart</button><button class="icon-btn primary" type="button" data-buy="${p.id}" ${p.price == null ? 'disabled' : ''}>Buy Now</button></div></div></div></article>`).join("");
+      shopEmpty.classList.toggle("show", filtered.length === 0);
+    }
+
+    function openModal(product){
+      selectedProduct = product;
+      document.getElementById("modalArt").innerHTML = productModalArt(product);
+      document.getElementById("modalBrand").textContent = product.brand;
+      document.getElementById("modalProductName").textContent = product.model;
+      document.getElementById("modalDescription").textContent = product.category === 'panel' ? "Solar panel listed in the supplied Solar Panels catalogue." : "On-grid inverter listed in the supplied On-Grid Inverters catalogue.";
+      const specs = product.category === 'panel' ? [['Wattage',product.wattage],['Technology',product.type]] : [['Capacity',product.capacity],['Phase',product.phase],['IP rating',product.ip],['Warranty',product.warranty]];
+      document.getElementById("modalSpecs").innerHTML = specs.filter(s => s[1]).map(s => `<div class="modal-spec"><span>${escapeHtml(s[0])}</span><strong>${escapeHtml(s[1])}</strong></div>`).join("");
+      document.getElementById("modalPrice").textContent = money(product.price);
+      productModal.classList.add("open"); productModal.setAttribute("aria-hidden","false"); document.body.classList.add("no-scroll");
+    }
+    function closeModal(){ productModal.classList.remove("open"); productModal.setAttribute("aria-hidden","true"); if(!cartWrap.classList.contains('open') && !checkoutModal.classList.contains('open')) document.body.classList.remove("no-scroll"); }
+
+    function addToCart(productId){
+      const product = SHOP_PRODUCTS.find(p => p.id === productId); if(!product || product.price == null) return;
+      const existing = cart.find(item => item.id === productId);
+      if(existing) existing.qty += 1; else cart.push({id:productId,qty:1});
+      saveCart(); renderCart();
+    }
+    function saveCart(){ localStorage.setItem("electroTechCart",JSON.stringify(cart)); updateCartCount(); }
+    function updateCartCount(){ cartCount.textContent = cart.reduce((sum,item)=>sum+item.qty,0); }
+    function renderCart(){
+      if(!cart.length){ cartItems.innerHTML='<div class="cart-empty">Your cart is empty.<br>Choose products from the catalogue to get started.</div>'; cartTotal.textContent='PKR 0'; updateCartCount(); return; }
+      let total=0;
+      cartItems.innerHTML=cart.map(item=>{const p=SHOP_PRODUCTS.find(x=>x.id===item.id); if(!p)return ''; const line=p.price*item.qty; total+=line; return `<div class="cart-item"><div class="cart-thumb">${productCartArt(p)}</div><div><h4>${escapeHtml(p.model)}</h4><p>${escapeHtml(p.brand)} · ${money(p.price)}</p><div class="qty"><button type="button" data-minus="${p.id}">−</button><span>${item.qty}</span><button type="button" data-plus="${p.id}">+</button></div></div><div class="cart-item-side"><strong>${money(line)}</strong><button class="remove-item" type="button" data-remove="${p.id}">Remove</button></div></div>`;}).join('');
+      cartTotal.textContent=money(total); updateCartCount();
+    }
+    function openCart(){ cartWrap.classList.add('open'); cartWrap.setAttribute('aria-hidden','false'); document.body.classList.add('no-scroll'); renderCart(); }
+    function closeCart(){ cartWrap.classList.remove('open'); cartWrap.setAttribute('aria-hidden','true'); if(!productModal.classList.contains('open') && !checkoutModal.classList.contains('open')) document.body.classList.remove('no-scroll'); }
+
+    function openCheckout(){
+      if(!cart.length) return;
+      closeCart();
+      const summary=document.getElementById('checkoutSummary');
+      let total=0;
+      const items=cart.map(item=>{
+        const p=SHOP_PRODUCTS.find(x=>x.id===item.id);
+        if(!p) return "";
+        const line=(p.price || 0)*item.qty; total+=line;
+        return `<div><strong>${escapeHtml(p.model)}</strong> × ${item.qty} — ${money(line)}</div>`;
+      }).filter(Boolean).join("");
+      summary.innerHTML=`<strong>Order summary</strong>${items}<div style="margin-top:10px"><strong>Total: ${money(total)}</strong></div>`;
+      checkoutModal.classList.add('open');
+      checkoutModal.setAttribute('aria-hidden','false');
+      document.body.classList.add('no-scroll');
+    }
+    function closeCheckout(){ checkoutModal.classList.remove('open'); checkoutModal.setAttribute('aria-hidden','true'); document.body.classList.remove('no-scroll'); }
+    function orderMessage(data){
+      let total=0;
+      const lines=cart.map((item,index)=>{
+        const p=SHOP_PRODUCTS.find(x=>x.id===item.id);
+        if(!p) return "";
+        const line=(p.price || 0)*item.qty;
+        total+=line;
+        return `${index+1}. ${p.model}\n   Brand: ${p.brand}\n   Quantity: ${item.qty}\n   Unit price: ${money(p.price)}\n   Line total: ${money(line)}`;
+      }).filter(Boolean).join('\n\n');
+      return `Hello, I would like to place an order with The Electro Tech Solar.
+
+CUSTOMER DETAILS
+Name: ${data.name}
+Phone / WhatsApp: ${data.phone}
+Email: ${data.email}
+City: ${data.city}
+Town / Area: ${data.town}
+Postal Code: ${data.postalCode}
+Complete Address: ${data.address}
+
+ORDERED PRODUCTS
+${lines}
+
+ORDER TOTAL: ${money(total)}
+
+Please confirm my order and advise the next steps.`;
+    }
+
+    shopSearch.addEventListener('input',renderProducts); shopCategory.addEventListener('change',renderProducts);
+    shopGrid.addEventListener('click',event=>{const view=event.target.closest('[data-view]'); const add=event.target.closest('[data-add]'); const buy=event.target.closest('[data-buy]'); if(view) openModal(SHOP_PRODUCTS.find(p=>p.id===view.dataset.view)); if(add) addToCart(add.dataset.add); if(buy){const p=SHOP_PRODUCTS.find(x=>x.id===buy.dataset.buy); if(p && p.price != null){cart=[{id:p.id,qty:1}]; saveCart(); openCheckout();}}});
+    document.getElementById('modalAdd').addEventListener('click',()=>{if(selectedProduct){addToCart(selectedProduct.id);closeModal();openCart();}});
+    document.getElementById('openCart').addEventListener('click',openCart);
+    cartItems.addEventListener('click',event=>{const plus=event.target.closest('[data-plus]'),minus=event.target.closest('[data-minus]'),remove=event.target.closest('[data-remove]'); const id=(plus||minus||remove)?.dataset[(plus?'plus':minus?'minus':'remove')]; if(!id)return; const item=cart.find(x=>x.id===id); if(plus)item.qty++; if(minus)item.qty--; if(remove||item?.qty<=0)cart=cart.filter(x=>x.id!==id); saveCart();renderCart();});
+    document.getElementById('checkoutButton').addEventListener('click',openCheckout);
+    document.getElementById('checkoutForm').addEventListener('submit',event=>{
+      event.preventDefault();
+      if(!event.target.checkValidity()){event.target.reportValidity();return;}
+      const data={
+        name:document.getElementById('checkoutName').value.trim(),
+        phone:document.getElementById('checkoutPhone').value.trim(),
+        email:document.getElementById('checkoutEmail').value.trim(),
+        city:document.getElementById('checkoutCity').value.trim(),
+        town:document.getElementById('checkoutTown').value.trim(),
+        postalCode:document.getElementById('checkoutPostalCode').value.trim(),
+        address:document.getElementById('checkoutAddress').value.trim()
+      };
+      const url='https://wa.me/'+SHOP_WHATSAPP_NUMBER+'?text='+encodeURIComponent(orderMessage(data));
+      window.open(url,'_blank','noopener');
+    });
+    document.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeModal)); document.querySelectorAll('[data-close-cart]').forEach(el=>el.addEventListener('click',closeCart)); document.querySelectorAll('[data-close-checkout]').forEach(el=>el.addEventListener('click',closeCheckout));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeModal();closeCart();closeCheckout();}});
+    renderProducts(); renderCart(); updateCartCount();
+
+  </script>
+</body>
+</html>
